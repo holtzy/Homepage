@@ -1,0 +1,67 @@
+---
+mydisqus: "dataToViz"
+mytitle: "From Data To Viz"
+output:
+  html_document:
+      self_contained: false    
+      mathjax: default
+      lib_dir: libs
+      template: template.html
+      theme: "lumen"
+      css: style.css
+      toc: FALSE
+      toc_float: TRUE
+      toc_depth: 2
+      number_sections: TRUE
+      df_print: "paged"
+      code_folding: "hide"
+      includes: 
+        after_body: footer.html
+---
+
+
+
+
+
+<div class="mycontent">
+
+
+
+# Content
+***
+
+A `heatmap` is a graphical representation of data where the individual values contained in a matrix are represented as colors. It is a bit like looking a data table from above. 
+
+Here is an example showing 8 general features like population or life expectancy for about 30 countries in 2015. Data come from the French National Institute of [Demographic Studies](https://www.ined.fr/en/everything_about_population/data/all-countries/?lst_continent=908&lst_pays=926).
+
+```{r, warning=FALSE, message=FALSE, fig.align="center", fig.height=7, fig.width=7}
+# Libraries
+library(tidyverse)
+library(hrbrthemes)
+library(viridis)
+library(plotly)
+library(d3heatmap)
+```
+
+
+
+#Comments
+***
+Any thoughts on this? Found any mistake? Disagree? Please drop me a word on [twitter](https://twitter.com/R_Graph_Gallery) or in the comment section below:
+<br>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

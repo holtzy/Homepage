@@ -179,7 +179,7 @@ img::-moz-selection {
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #69b3a2;
   background-color: white;
-  border-bottom: 5px solid #69b3a2;
+  border-bottom: 3px solid #69b3a2;
 }
 
 
@@ -1265,6 +1265,39 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* BLOG SECTION
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.blogtitle{
+  font-size: 23px;
+  color: #69b3a2;
+  line-height: 0.5;
+  font-weight: 400
+}
+
+.blogfeature{
+  font-size: 12px;
+  color: grey;
+}
+
+.blogtext{
+  font-size: 18px;
+  color: black;
+  font-weight: 100
+}
+
+.blogreadmore{
+  font-size: 18px;
+  color: #69b3a2;
+  font-weight: 300
 }
 
 

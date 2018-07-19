@@ -53,7 +53,7 @@
               <a class="nav-link js-scroll-trigger" href="#description">Description</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#story">Blog</a>
+              <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#website">Website</a>
@@ -62,7 +62,7 @@
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#caveats">References</a>
+              <a class="nav-link js-scroll-trigger" href="#testimonial">Testimonial</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -123,6 +123,7 @@
       <br><br>
       <p>Welcome in Yan Holtz's homepage.<br>I'm a data analysis and visualisation freelancer with a background in biology.</p>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#description">Visit</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Contact</a>
   </div>
 </header>
 
@@ -141,34 +142,150 @@
 
 <!-- =======================  DESCRIPTION SECTION ======================= -->
 
-<section id="description" class="bg-light">
+<section id="description" class="bg-light" style="padding-bottom: 3%">
   <div class="container" >
+
     <div class="row">
-      
       <div class="col-lg-4 text-center">
         <img class="img-fluid" src="img/team/YH_pic_square.png" alt="">
       </div>
-
       <div class="col-lg-8">
-        
-        <p>Hello this is who I am</p>
-        <p>I am passionate about data. My current job consists to analyze huge biological datasets for several researchers of the French National Institute for Agricultural Research (INRA).</p>
-        <p>I am skilled for most of the data-science steps: data pre-processing, application of statistical methods, data visualization and results communication.</p>
+        <p>Hi, I'm Yan!</p>
+        <p>My job consists to help companies and researchers to analyse their datasets. I am skilled for most of the data-science steps: data pre-processing, application of statistical methods, data visualization and results communication.</p>
+        <p>I am currently working for the Queensland Brain Institute in Australia, where I develop data visualisation methods at the border between epidemiology and genetics.</p>
         <a class="btn btn-secondary btn-l text-uppercase" href="about.html#toolsanchor">Publication</a>
         <a class="btn btn-secondary btn-l text-uppercase" href="https://github.com/holtzy/Talk">Talks</a>
         <a class="btn btn-secondary btn-l text-uppercase" href="https://twitter.com/R_Graph_Gallery">Twitter</a>
         <a class="btn btn-secondary btn-l text-uppercase" href="https://github.com/holtzy">Github</a>
-
       </div>
-
     </div>  
+
+
+    <div class="row" style="padding-top: 5%">
+      <div class="col-lg-12 text-center">
+        <svg width="1000" height="100">
+          <line x1="0" y1="50" x2="1000" y2="50" style="stroke:black; stroke-width:1.5" />
+
+          <circle cx="150" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+          <text text-anchor="middle" x="150" y="80" fill="black">2012</text>
+          <text font-size="13" text-anchor="middle" x="70" y="30" fill="black">Master Degree</text>
+
+          <circle cx="450" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+          <text text-anchor="middle" x="450" y="80" fill="black">2015</text>
+          <text font-size="13" text-anchor="middle" x="300" y="30" fill="black">Data Analyst at INRA</text>
+
+          <circle cx="750" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+          <text text-anchor="middle" x="750" y="80" fill="black">2017</text>
+          <text font-size="13" text-anchor="middle" x="600" y="30" fill="black">Freelance - Data analysis</text>
+
+          <text font-size="13" text-anchor="middle" x="870" y="30" fill="black">Queensland Brain Institute</text>
+
+        </svg>
+      </div>
+    </div>
   </div>
 </section>
+
+
+
+
+
+<style>
+div#timeline {
+  background-color: black;
+  margin-top: 150px;
+  height: 2px;
+  position: relative;
+}
+
+.dot {
+    //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+    z-index: 99;
+    transition : 0.3s ease-in-out;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-color: white;
+    position: absolute;
+    top: -15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#one {
+      left: 20%;
+    }
+
+#two {
+      left: 40%;
+    }
+#three {
+      left: 60%;
+    }
+#four {
+      left: 70%;
+    }
+#five {
+      left: 90%;
+    }
+
+.date {
+      font-size: 1.1rem;
+      display: block;
+      position: relative;
+      top: -30px;
+      text-align: left;
+    }
+
+</style>
+
+
 
 <!-- ======================================================================= -->
 
 
 
+
+
+
+
+
+
+<!-- ======================== BLOG SECTION ============================ -->
+
+
+
+    <section id="blog" style="padding-top: 3%; padding-bottom: 3%">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center" style="padding-bottom: 3%">
+            <p style="display:inline; font-size: 35px">ONLY</p><p style="display:inline; font-size: 35px"> - </p><p style="display:inline; font-size: 35px">DATA</p>
+            <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
+            <h3 class="section-subheading text-muted">A few stories about statistics, R, dataviz. More or less linked with our world, always related to data</h3>
+          </div>
+          <br><br>
+
+          <div class="col-lg-12 text-left" style="padding-bottom: 4%">
+            <a href="blog/dataToViz.html"><p class="blogtitle">From Data to Viz - A classification of graphics based on input data format</p></a>
+            <p class="blogfeature">July 2018 - 6 minutes read</p>
+            <p class="blogtext">I’m delighted to announce a new dataviz project called <a href="https://www.data-to-viz.com">Data to Viz</a>. It is a classification of chart types based on input data format. It comes in the form of a decision tree leading to a set of potentially appropriate visualizations to represent the dataset.<span class="blogreadmore"> - <a href="blog/dataToViz.html">Read more</a></span></p>
+          </div>
+
+          <div class="col-lg-12 text-left" style="padding-bottom: 4%">
+            <p class="blogtitle">Pimp my RMD - A collection of tips for R Markdown</p>
+            <p class="blogfeature">July 2018 - 2 minutes read</p>
+            <p class="blogtext">R markdown creates interactive reports from R code. I’ve created a document that provides a few tips I use on a daily basis to improve the appearance of my html outputs (my memory aid). This document is built using R Markdown and hosted on Github.<span class="blogreadmore"> - Read more</span></p>
+          </div>
+
+          <div class="col-lg-12 text-left" style="padding-bottom: 3%">
+            <a class="btn btn-primary btn-xl text-uppercase" href="blog.html">See All</a>
+            <a class="btn btn-primary btn-xl text-uppercase" href="https://www.r-bloggers.com">R Blogger</a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
 
 
 
@@ -395,102 +512,54 @@
 
 
 
-<!-- =========================== CAVEAT SECTION ============================ -->
+<!-- =========================== REFERENCE SECTION ============================ -->
 
 
-    <section id="caveats">
+    <section id="testimonial" style="padding-top: 3%; padding-bottom: 3%">
       <div class="container">
-
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">References</h2>
-            <h3 class="section-subheading text-muted">A few feedbacks from people I've been working with</a></h3>
-          </div>
-        </div>
-
-
 
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
 
               <div class="carousel-item active">
                 <div class="row">
-                  
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="caveat/order_data.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
-                      <img  src="img/mistake/order_data.png">
-                      <p class="mytitlerelated">Order your data</p>
-                      <p class="mytextrelated">When displaying the value of several entities, ordering it makes it way more insightful.</p>
-                    </a>
+                  <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
+                    <img src="img/reference/DGouache.png" style="border-radius: 50%" width="170px">
+                  </div>
+                  <div class="col-lg-8 col-md-6 col-sm-6">
+                    <br>
+                    <p style="color: grey; font-size: 8; text-align: left"><i>"[...] Yan did an absolutely brilliant job. He has multiple skills and qualities making him a great data science project member, and even leader : excellent knowledge and learning ability of diverse statistical and data management tools obviously, and a real knack for data viz."</i></p>
+                    <p><a href="https://www.linkedin.com/in/david-gouache-88097462/">D. Gouache</a> - <span style="font-size: 12px; display: inline;"><i>Deputy Director at <a href="http://www.terresinovia.fr">Terres Inovia</a></i></span></p>
                   </div>
                 </div>
               </div>
 
               <div class="carousel-item">
                 <div class="row">
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="caveat/bin_size.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
-                      <img  src="img/mistake/bin_size.png">
-                      <p class="mytitlerelated">Play with histogram bin size</p>
-                      <p class="mytextrelated">Always try different bin sizes when you build an histogram, it can lead to different insights.</p>
-                    </a>
+                  <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
+                    <img src="img/reference/JDavid.jpg" style="border-radius: 50%" width="170px">
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="caveat/boxplot.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
-                      <img  src="img/mistake/boxplot.png">
-                      <p class="mytitlerelated">Do boxplots hide information?</p>
-                      <p class="mytextrelated">A boxplot is a great way to summarize a distribution but it hides the sample size and data distribution.</p>
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="caveat/error_bar.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
-                      <img  src="img/mistake/error_bar.png">
-                      <p class="mytitlerelated">The problem with error bars</p>
-                      <p class="mytextrelated">Barplots with error bars must be used with great care. Learn why and how to replace them.</p>
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="caveat/multi_distribution.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
-                      <img  src="img/mistake/multi_distribution.png">
-                      <p class="mytitlerelated">Too many distributions</p>
-                      <p class="mytextrelated">If you need to compare the distribution of many variables, don't clutter your graph.</p>
-                    </a>
+                  <div class="col-lg-8 col-md-6 col-sm-6">
+                    <br>
+                    <p style="color: grey; font-size: 8; text-align: left"><i>"Yan always performed with outstanding skills and impressive capacity for adaptation and efficiency. His job was crucial for the publication of important results. [...] I thus highly recommend him for any work concering framing and analysis of huge data sets."</i></p>
+                    <p><a href="https://www.researchgate.net/profile/Jacques_David4">J. David</a> - <span style="font-size: 12px; display: inline;"><i>Professor at <a href="https://www.montpellier-supagro.fr">Montpellier Supagro</a></i></span></p>
                   </div>
                 </div>
               </div>
 
               <div class="carousel-item">
                 <div class="row">
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="caveat/overplotting.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
-                      <img  src="img/mistake/overplotting.png">
-                      <p class="mytitlerelated">Overplotting</p>
-                      <p class="mytextrelated">Too many points on your scatter plot makes it unreadable? Techniques exist to avoid overplotting.</p>
-                    </a>
+                  <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
+                    <img src="img/reference/SGlemin.jpg" style="border-radius: 50%" width="170px">
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="caveat/rainbow.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
-                      <img  src="img/mistake/rainbow.png">
-                      <p class="mytitlerelated">The rainbow color palette</p>
-                      <p class="mytextrelated">Avoid the rainbow color palette when you map a numeric variable. So many better palettes exist.</p>
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="caveat/small_multiple.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
-                      <img  src="img/mistake/small_multiple.png">
-                      <p class="mytitlerelated">Faceting: horizontal or vertical?</p>
-                      <p class="mytextrelated">Placing individual plots horizontally or vertically is an important choice to make.</p>
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="caveat/counter_intuitive.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
-                      <img  src="img/mistake/counter_intuitive.png">
-                      <p class="mytitlerelated">Don't be counter intuitive</p>
-                      <p class="mytextrelated">Your audience is used to a few dataviz standards. Not respecting it can mislead them.</p>
-                    </a>
+                  <div class="col-lg-8 col-md-6 col-sm-6">
+                    <br>
+                    <p style="color: grey; font-size: 8; text-align: left"><i>"I worked with Yan for several collaborative projects on genomic data analysis. Yan was very efficient and highly reactive to our requests and he was also autonomous to find the best solutions to the problems we submitted to him."</i></p>
+                    <p><a href="https://www.researchgate.net/profile/Jacques_David4">S. Glémin</a> - <span style="font-size: 12px; display: inline;"><i>Senior Researcher at <a href="https://www.montpellier-supagro.fr">CNRS</a></i></span></p>
                   </div>
                 </div>
               </div>
+
             </div>
 
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -504,9 +573,6 @@
           </div>
 
         </div>
-        <br>
-        <div style="text-align:center"><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="caveats.html">See the collection</a></div>
-
       </section>
 
 
@@ -523,15 +589,48 @@
 
 
 
+
+
+<!-- ======================= CONTACT SECTION =============================== -->
+
+
+
+  <section id="contact" class="bg-light" style="padding-top: 2%; padding-bottom: 6%">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-2 text-center"></div>
+         <div class="col-lg-8 text-center">
+           <br><br><br>
+           <h2 class="section-heading text-uppercase" style="color: black">Contact</h2>
+           <p>Feel free to contact me for any question. For open source project, please open an issue or pull request on <a href="https://github.com/holtzy/">Github</a>. If you want to follow my work, reach me on <a href="https://twitter.com/R_Graph_Gallery">Twitter</a>. Otherwise, send me an email at <a href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a>.</p>
+           <div style="text-align:center">
+              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://github.com/holtzy/data_to_viz">Github</a>
+              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://twitter.com/R_Graph_Gallery">Twitter</a>
+              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="mailto:yan.holtz.data@gmail.com">Mail</a>
+            </div>
+
+         </div>
+       </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
 <!-- ======================== MAP SECTION ============================ -->
 
     <style>
        /* Set the size of the div element that contains the map */
       #map {
-        height: 400px;  /* The height is 400 pixels */
+        height: 300px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
         background-color: grey;
-        opacity: 0.6
+        opacity: 1
 
        }
     </style>
@@ -540,53 +639,261 @@
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: 43.61092, lng: 3.52};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
+      function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4, 
+          center: {lat: 43.61092, lng: 3.87723},
+          styles: [
+                    {
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#1d2c4d"
+                        }
+                      ]
+                    },
+                    {
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#8ec3b9"
+                        }
+                      ]
+                    },
+                    {
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                        {
+                          "color": "#1a3646"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative.country",
+                      "elementType": "geometry.stroke",
+                      "stylers": [
+                        {
+                          "color": "#4b6878"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative.land_parcel",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#64779e"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "administrative.province",
+                      "elementType": "geometry.stroke",
+                      "stylers": [
+                        {
+                          "color": "#4b6878"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "landscape.man_made",
+                      "elementType": "geometry.stroke",
+                      "stylers": [
+                        {
+                          "color": "#334e87"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "landscape.natural",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#023e58"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "poi",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#283d6a"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "poi",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#6f9ba5"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "poi",
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                        {
+                          "color": "#1d2c4d"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "poi.park",
+                      "elementType": "geometry.fill",
+                      "stylers": [
+                        {
+                          "color": "#023e58"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "poi.park",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#3C7680"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#304a7d"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#98a5be"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road",
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                        {
+                          "color": "#1d2c4d"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road.highway",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#2c6675"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road.highway",
+                      "elementType": "geometry.stroke",
+                      "stylers": [
+                        {
+                          "color": "#255763"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road.highway",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#b0d5ce"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "road.highway",
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                        {
+                          "color": "#023e58"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "transit",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#98a5be"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "transit",
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                        {
+                          "color": "#1d2c4d"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "transit.line",
+                      "elementType": "geometry.fill",
+                      "stylers": [
+                        {
+                          "color": "#283d6a"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "transit.station",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#3a4762"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "water",
+                      "elementType": "geometry",
+                      "stylers": [
+                        {
+                          "color": "#0e1626"
+                        }
+                      ]
+                    },
+                    {
+                      "featureType": "water",
+                      "elementType": "labels.text.fill",
+                      "stylers": [
+                        {
+                          "color": "#4e6d70"
+                        }
+                      ]
+                    }
+                  ]
+        });
+      var contentString = '<div id="content" style="font-size: 14px; line-height: 20px">Montpellier, France<br><a href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a></div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+      var marker = new google.maps.Marker({position: {lat: 43.61092, lng: 3.52}, map: map})
+      marker.addListener('click', function() {
+          infowindow.open(map, marker);
+      });
+    }
     </script>
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
-    -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&callback=initMap">
     </script>
 
 
 
-
-
-
-
-<!-- ======================= CONTACT SECTION =============================== -->
-
-
-
-  <section id="contact" class="bg-light">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-2 text-center"></div>
-         <div class="col-lg-8 text-center">
-           <br><br><br>
-           <h2 class="section-heading text-uppercase" style="color: black">Contact</h2>
-           <p>From Data to Viz is currently in beta version and any feedback is highly encouraged. You can open an issue on <a href="https://github.com/holtzy/data_to_viz">Github</a>, drop us a message on <a href="https://twitter.com/R_Graph_Gallery">Twitter</a>, or send us an email at <a href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a>.</p>
-           <div style="text-align:center">
-              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://github.com/holtzy/data_to_viz">Github</a>
-              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://twitter.com/R_Graph_Gallery">Twitter</a>
-            </div>
-
-         </div>
-       </div>
-    </div>
-  </section>
 
 
 
