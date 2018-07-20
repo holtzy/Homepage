@@ -56,6 +56,13 @@ section h3.section-subheading {
 }
 
 
+u {
+  padding-bottom:3px;
+  text-decoration:none;
+  border-bottom:1px solid #000;
+}
+
+
 
 
 /* ---------- Button ----------------- */
@@ -1278,7 +1285,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .blogtitle{
   font-size: 23px;
-  color: #69b3a2;
+  color: black;
   line-height: 0.5;
   font-weight: 400
 }
@@ -1299,6 +1306,39 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   color: #69b3a2;
   font-weight: 300
 }
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* LANDING PAGE
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+
+.textlanding {
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  max-width: 600px;
+  padding: 2em 3em;
+}
+.arrowlanding {
+  color: black;
+  position: absolute;
+  top: 98%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  max-width: 600px;
+  padding: 2em 3em;
+}
+
+
+
+
+
 
 
 

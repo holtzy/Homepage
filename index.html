@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Data Focus | Data science consulting</title>
+    <title>Yan Holtz | Data - Science - Viz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="The home page for Yan Holtz analytics activities">
     <meta name="keywords" content="Consulting,Freelance,Datascience,Training,Data,Dataviz,Datavisualization,Plot,Chart,Graph,R,Python,D3,Learning,Caveat,Pitfall,Mistake,Classification">
@@ -41,7 +41,7 @@
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
         <a class="js-scroll-trigger" href="#page-top">
-          DATA FOCUS
+          HOME
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -50,13 +50,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#description">Description</a>
+              <a class="nav-link js-scroll-trigger" href="#description">Intro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+              <a class="nav-link" href="blog.html">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#website">Website</a>
+              <a class="nav-link js-scroll-trigger" href="#website">Websites</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -85,21 +85,10 @@
 
 <!-- =======================  LANDING SECTION ======================= -->
 
-<style>
-.text {
-  color: black;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%,-50%);
-  max-width: 600px;
-  padding: 2em 3em;
-}
-</style>
 
 <header class="masthead">
   <div id="particles-js"></div>
-  <div class="text">
+  <div class="textlanding">
     <p style="display:inline; font-size: 35px">YAN</p><p style="display:inline; font-size: 35px"> - </p><p style="display:inline; font-size: 35px">HOLTZ</p>
       <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
       <br>
@@ -121,16 +110,22 @@
         </li>
       </ul>
       <br><br>
-      <p>Welcome in Yan Holtz's homepage.<br>I'm a data analysis and visualisation freelancer with a background in biology.</p>
+      <p>Welcome in Yan Holtz's <u>homepage</u>.<br>I'm a data analysis and visualisation enthousiast with a background in biology.</p>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#description">Visit</a>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Contact</a>
+  </div>
+  <div class="arrowlanding">
+    <a class="js-scroll-trigger" href="#blog"><p style="font-size: 80px; color: #69b3a2">&#xfe40;</p></a>
   </div>
 </header>
 
 
 <!-- scripts -->
 <script src="js/particles.js"></script>
-<script src="js/app.js"></script>
+<script src="js/appHome.js"></script>
+
+
+
 
 
 
@@ -153,7 +148,7 @@
         <p>Hi, I'm Yan!</p>
         <p>My job consists to help companies and researchers to analyse their datasets. I am skilled for most of the data-science steps: data pre-processing, application of statistical methods, data visualization and results communication.</p>
         <p>I am currently working for the Queensland Brain Institute in Australia, where I develop data visualisation methods at the border between epidemiology and genetics.</p>
-        <a class="btn btn-secondary btn-l text-uppercase" href="about.html#toolsanchor">Publication</a>
+        <a class="btn btn-secondary btn-l text-uppercase" href="https://github.com/holtzy/Publication">Publication</a>
         <a class="btn btn-secondary btn-l text-uppercase" href="https://github.com/holtzy/Talk">Talks</a>
         <a class="btn btn-secondary btn-l text-uppercase" href="https://twitter.com/R_Graph_Gallery">Twitter</a>
         <a class="btn btn-secondary btn-l text-uppercase" href="https://github.com/holtzy">Github</a>
@@ -185,60 +180,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-<style>
-div#timeline {
-  background-color: black;
-  margin-top: 150px;
-  height: 2px;
-  position: relative;
-}
-
-.dot {
-    //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
-    z-index: 99;
-    transition : 0.3s ease-in-out;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border-color: white;
-    position: absolute;
-    top: -15px;
-    text-align: center;
-    cursor: pointer;
-}
-
-#one {
-      left: 20%;
-    }
-
-#two {
-      left: 40%;
-    }
-#three {
-      left: 60%;
-    }
-#four {
-      left: 70%;
-    }
-#five {
-      left: 90%;
-    }
-
-.date {
-      font-size: 1.1rem;
-      display: block;
-      position: relative;
-      top: -30px;
-      text-align: left;
-    }
-
-</style>
-
 
 
 <!-- ======================================================================= -->
@@ -431,7 +372,7 @@ div#timeline {
 
 
           <div class="col-md-3 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <a class="portfolio-link" data-toggle="modal" href="#greentech">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <p>GreenTech Challenge</p>
@@ -956,7 +897,7 @@ div#timeline {
 <!-- =================== MODAL SECTION ===================================== -->
 
     <!-- Poster FULL -->
-    <div class="portfolio-modal modal fade" id="poster_full" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="greentech" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog h-100" style="max-width: 100vw;">
         <div class="modal-content"> 
           <div class="close-modal" data-dismiss="modal">
@@ -968,7 +909,31 @@ div#timeline {
             <div class="row">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <img class="img-fluid d-block mx-auto" src="img/poster/poster_big.png" alt="" style="height: 100%; width: 100%">
+                   <p style="display:inline; font-size: 35px; margin-top: 60px">The GreenTech Challenge</p>
+                      <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
+                      <br>
+                      <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                          <a href="https://twitter.com/R_Graph_Gallery">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item social-buttons">
+                          <a href="https://github.com/holtzy">
+                            <i class="fa fa-github" style="color: white"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item social-buttons">
+                          <a href="https://www.linkedin.com/in/yan-holtz-2477534a/">
+                            <i class="fa fa-linkedin"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <br><br>
+                      <p>Yan Holtz's <u>blog</u> on statistics, R and Dataviz. More or less linked with our world, always related to data.</p>  
+                      <h1>Something</h1>
+                      <hr>
+                      <p>blaaaaa</p>                
 
                 </div>
             </div>
