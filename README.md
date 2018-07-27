@@ -1,13 +1,12 @@
-Data-Focus
+Homepage
 ==========
 
+This repository gives the code for my online homepage. You can visit at:
 
-My homepage, where I describe my data analytics activity
+[yan-holtz.com](https://www.yan-holtz.com)
 
-real URL to come.
+Note that by blog is linked to this, available at:
 
-
-https://holtzy.github.io/Data-Focus/
-
+[yan-holtz.com/blog](https://www.yan-holtz.com/blog)
 
 
