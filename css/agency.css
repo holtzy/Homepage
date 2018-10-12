@@ -80,6 +80,7 @@ u {
 .btn-xl {
   font-size: 18px;
   padding: 20px 40px;
+  margin: 3px;
 }
 
 .btn-primary {
@@ -1292,7 +1293,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .blogtitle{
   font-size: 23px;
   color: black;
-  line-height: 0.5;
   font-weight: 400
 }
 
