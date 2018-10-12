@@ -1,6 +1,7 @@
 ---
 mydisqus: "dataToViz"
-mytitle: "From Data To Viz"
+mytitle: "Announcing Data To Viz"
+mydescription: "Announcing Data To Viz, a decision tree based on input data format for data visualization."
 output:
   html_document:
       self_contained: false    
@@ -21,27 +22,20 @@ output:
 
 
 
-
-
 <div class="mycontent">
 
 
+I’m delighted to announce a new dataviz project called ‘[Data to Viz](https://www.data-to-viz.com)’.
 
-# Content
-***
+—> [data-to-viz.com](https://www.data-to-viz.com)
 
-A `heatmap` is a graphical representation of data where the individual values contained in a matrix are represented as colors. It is a bit like looking a data table from above. 
 
-Here is an example showing 8 general features like population or life expectancy for about 30 countries in 2015. Data come from the French National Institute of [Demographic Studies](https://www.ined.fr/en/everything_about_population/data/all-countries/?lst_continent=908&lst_pays=926).
 
-```{r, warning=FALSE, message=FALSE, fig.align="center", fig.height=7, fig.width=7}
-# Libraries
-library(tidyverse)
-library(hrbrthemes)
-library(viridis)
-library(plotly)
-library(d3heatmap)
-```
+#What it is
+
+[From Data to Viz](https://www.data-to-viz.com) is a classification of chart types based on input data format. It comes in the form of a decision tree leading to a set of potentially appropriate visualizations to represent the dataset.
+ 
+The decision trees are available in a [poster](https://www.data-to-viz.com/poster.html) that has been presented at the [UseR conference](https://user2018.r-project.org/) in Brisbane.
 
 
 
