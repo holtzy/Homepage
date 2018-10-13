@@ -62,6 +62,8 @@
 <div id="particles-js" style="height: 400px"></div>
 <div class="text" style="text-align: center;">
   <p class="mytitle">Announcing Data To Viz</p>
+  <hr style="color: black">
+  <p class="mysubtitle">Announcing Data To Viz, a decision tree based on input data format for data visualization.</p>
 </div>
 
 <!-- scripts -->
@@ -190,14 +192,35 @@ $(document).ready(function () {
 
 
 <div class="mycontent">
-<p>I’m delighted to announce a new dataviz project called ‘<a href="https://www.data-to-viz.com">Data to Viz</a>’.</p>
-<p>—&gt; <a href="https://www.data-to-viz.com">data-to-viz.com</a></p>
+<p><br><br> I’m delighted to announce a new dataviz project called ‘<a href="https://www.data-to-viz.com">Data to Viz</a>’. —&gt; <a href="https://www.data-to-viz.com">data-to-viz.com</a></p>
 <h1 id="what-it-is">What it is</h1>
+<hr />
 <p><a href="https://www.data-to-viz.com">From Data to Viz</a> is a classification of chart types based on input data format. It comes in the form of a decision tree leading to a set of potentially appropriate visualizations to represent the dataset.</p>
 <p>The decision trees are available in a <a href="https://www.data-to-viz.com/poster.html">poster</a> that has been presented at the <a href="https://user2018.r-project.org/">UseR conference</a> in Brisbane.</p>
-<h1 id="comments">Comments</h1>
+<div class="figure">
+<img src="img/poster_medium.png" />
+
+</div>
+<h1 id="philosophy">Philosophy</h1>
 <hr />
-<p>Any thoughts on this? Found any mistake? Disagree? Please drop me a word on <a href="https://twitter.com/R_Graph_Gallery">twitter</a> or in the comment section below: <br></p>
+<p>The project is built on two underlying philosophies. First, that most data analysis can be summarized in about twenty different dataset formats. Second, that both data and context determine the appropriate chart. Thus, our suggested method consists in identifying and trying all feasible chart types to find out which suits your data and idea best. Once this set of graphic identified, <a href="https://www.data-to-viz.com">data-to-viz.com</a> aims to guide you toward the best decision.</p>
+<h1 id="content">Content</h1>
+<hr />
+<p>Several sections are available on top of the decision tree:</p>
+<p>– <a href="https://www.data-to-viz.com/index.html#portfolio">portfolio</a> : an overview of all chart possibilities. For each, an extensive description is given, showing variations, pros and cons, common pitfalls and more.</p>
+<p>– <a href="https://www.data-to-viz.com/index.html#story">stories</a> : for each input data format, a real life example is analyzed to illustrate the different chart types applicable to it.</p>
+<p>– <a href="https://www.data-to-viz.com/caveats.html">caveat gallery</a> : a list of common dataviz pitfalls, with suggested workarounds.</p>
+<div class="figure">
+<img src="img/caveat_gallery_overview.png" />
+
+</div>
+<h1 id="link-with-r">Link with R</h1>
+<hr />
+<p>From Data to Viz aims to give general advices for data visualization in general and is not targeting R users especialy. However, 100% of the charts are made using R, mostly using ggplot2 and the tidyverse. The reproducible code snippets are always available. The biggest part of the website is built using R Markdown, using a good amount of hacks described here. The website is tightly linked with the R graph gallery. Once you’ve identified the graphic that suits your needs, you will be redirected to the appropriate section of the gallery to get the R code in minutes.</p>
+<h1 id="next-step">Next step</h1>
+<hr />
+<p>From Data to Viz is still in beta version, and a lot remains to be done. The caveat gallery is incomplete and some chart types are missing. Also, a few inaccuracies may be present in the decision tree. Last but not least the English is horrible but this is not likely to change unfortunately, I apologize for that. If you find any mistake or potential improvement, please fill an issue on GitHub, contact me at <a href="mailto:Yan.holtz.data@gmail.com">Yan.holtz.data@gmail.com</a> or on twitter, or leave a comment below. Any feedback will be very welcome.</p>
+<p><br></p>
 </div>
 
 
