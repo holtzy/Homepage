@@ -1,13 +1,14 @@
 ---
 mydisqus: "dataToViz"
-mytitle: "Announcing Data To Viz"
-mydescription: "Announcing Data To Viz, a decision tree based \n on input data format for data visualization."
+mytitle: "Announcing \nData To Viz"
+mydescription: ""
+myimage: "datatoviz_logo.png"
 output:
   html_document:
       self_contained: false    
       mathjax: default
       lib_dir: libs
-      template: template.html
+      template: template_basic.html
       theme: "lumen"
       css: style.css
       toc: FALSE
@@ -24,8 +25,9 @@ output:
 
 <div class="mycontent">
 
-<br><br>
-I’m delighted to announce a new dataviz project called ‘[Data to Viz](https://www.data-to-viz.com)’. —> [data-to-viz.com](https://www.data-to-viz.com)
+<br><br><br>
+I’m delighted to announce a new dataviz project called ‘[Data to Viz](https://www.data-to-viz.com)’.  
+—> [data-to-viz.com](https://www.data-to-viz.com)
 
 
 
@@ -64,16 +66,17 @@ Several sections are available on top of the decision tree:
 
 #Link with R
 ***
-From Data to Viz aims to give general advices for data visualization in general and is not targeting R users especialy.
-However, 100% of the charts are made using R, mostly using ggplot2 and the tidyverse. The reproducible code snippets are always available. The biggest part of the website is built using R Markdown, using a good amount of hacks described here.
-The website is tightly linked with the R graph gallery. Once you’ve identified the graphic that suits your needs, you will be redirected to the appropriate section of the gallery to get the R code in minutes.
+From Data to Viz aims to give general advices for data visualization in general and is not targeting [R](https://www.r-graph-gallery.com) users especialy. However, 100% of the charts are made using R, mostly using [ggplot2](https://www.r-graph-gallery.com/portfolio/ggplot2-package/) and the tidyverse. The reproducible code snippets are always available. The biggest part of the website is built using R Markdown, using a good amount of [hacks described here](https://holtzy.github.io/Pimp-my-rmd/).
+
+The website is tightly linked with the [R graph gallery](https://www.r-graph-gallery.com/). Once you’ve identified the graphic that suits your needs, you will be redirected to the appropriate section of the gallery to get the R code in minutes.
  
  
  
 #Next step
 ***
-From Data to Viz is still in beta version, and a lot remains to be done. The caveat gallery is incomplete and some chart types are missing. Also, a few inaccuracies may be present in the decision tree. Last but not least the English is horrible but this is not likely to change unfortunately, I apologize for that.
-If you find any mistake or potential improvement, please fill an issue on GitHub, contact me at Yan.holtz.data@gmail.com or on twitter, or leave a comment below. Any feedback will be very welcome.
+From Data to Viz is still in beta version, and a lot remains to be done. The [caveat gallery](http://www.data-to-viz.com/caveats.html) is incomplete and some chart types are missing. Also, a few inaccuracies may be present in the decision tree. Last but not least the English is horrible but this is not likely to change unfortunately, I apologize for that.
+
+If you find any mistake or potential improvement, please fill an issue on [GitHub](https://github.com/holtzy/data_to_viz), contact me at [Yan.holtz.data@gmail.com](Yan.holtz.data@gmail.com) or on [twitter](https://twitter.com/R_Graph_Gallery), or leave a comment below. Any feedback will be very welcome!
 
 <br>
 

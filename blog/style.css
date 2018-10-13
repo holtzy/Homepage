@@ -66,6 +66,8 @@ a {
 .mysubtitle{
   color:grey;
   font-family: 'Montserrat';
+  max-width: 300px;
+
 }
 
 
