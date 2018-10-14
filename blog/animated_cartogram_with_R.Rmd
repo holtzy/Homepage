@@ -1,0 +1,158 @@
+---
+mydisqus: "animated_cartogram_with_R"
+mytitle: "Map: a smooth transition to cartogram with R"
+mydescription: "January 2018 - 9 minutes read"
+myimage: "cartogram_logo.png"
+output:
+  html_document:
+      self_contained: false    
+      mathjax: default
+      lib_dir: libs
+      template: template_basic.html
+      theme: "lumen"
+      css: style.css
+      toc: FALSE
+      toc_float: TRUE
+      toc_depth: 2
+      number_sections: TRUE
+      df_print: "paged"
+      includes: 
+        after_body: footer.html
+---
+
+<br><br><br>
+
+<div class="mycontent">
+
+This post describes how to make a smooth transition `.gif` between a classic [choropleth map](https://www.r-graph-gallery.com/chloropleth-map/) and a [cartogram](https://www.r-graph-gallery.com/cartogram/).  
+
+It starts by doing a basic map of Africa and then distorts country size using the [cartogram](https://github.com/sjewo/cartogram) library. [Ggplot2](https://www.r-graph-gallery.com/portfolio/ggplot2-package/) is then used to make a nice choropleth version. Finally the [tweenr](https://github.com/thomasp85/tweenr) and the [gganimate](https://github.com/dgrtwo/gganimate) libraries build a smooth transition between both maps.  
+
+At the end of this post, you should obtain a `.gif file that looks like this:
+
+<center>![](IMG/animated_carto_africa.gif)</center>
+
+<br>
+
+Before starting, we need a few libraries:
+```{r warning=FALSE, message=FALSE}
+# Load libraries
+library(tidyverse)    # As always
+library(cartogram)    # for the cartogram
+library(ggplot2)      # to realize the plots
+library(broom)        # from geospatial format to data frame
+library(tweenr)       # to create transition dataframe between 2 states
+library(gganimate)    # To realize the animation
+library(maptools)     # world boundaries coordinates
+library(viridis)      # for a nice color palette
+```
+
+
+
+#A basic map of Africa
+***
+
+The [maptools library](https://cran.r-project.org/web/packages/maptools/maptools.pdf) provides all the information we need to draw a map of Africa. All the country boundaries are stored in the `world_simpl` object. Let’s load this object, keep only Africa, and draw a basic representation.
+
+We only need 3 lines of code to start!
+
+```{r warning=FALSE, message=FALSE}
+# Get the shape file of Africa
+data(wrld_simpl)
+afr=wrld_simpl[wrld_simpl$REGION==2,]
+ 
+# A basic representation
+plot(afr)
+```
+
+
+
+
+
+#Compute cartogram boundaries
+***
+The `afr` object is a **spatial object**. Thus it has a `data slot` that gives a few information concerning each region. You can visualise this info typing `afr@data` in our case. You will see that a column called `POP2005` is available, providing the number of inhabitants per country in 2005.  
+
+Using this information we can use the [cartogram library](https://github.com/sjewo/cartogram) to build… a cartogram! Basically, it will distort the shape of every country proportionally to its number of inhabitants. The output is a new geospatial object that we can map like we’ve done before.  
+
+As you can see in the image on the left, Nigeria appears way bigger on this map, since it has a population of about 141M inhabitants!
+
+
+```{r warning=FALSE, message=FALSE}
+# construct a cartogram using the population in 2005
+afr_cartogram <- cartogram(afr, "POP2005", itermax=7)
+ 
+# A basic representation
+plot(afr_cartogram)
+```
+
+
+
+
+#A nicer representation using ggplot2
+***
+Let’s improve the appearance of these 2 maps using the [ggplot2 library](https://www.r-graph-gallery.com/portfolio/ggplot2-package/). Note that ggplot2 uses data frame and not geospatial object. The transformation to a data frame is done using the `tidy` function of the `broom library. Since it does not transfer the data slot automatically, we merge it afterward.
+
+The [geom_polygon](http://ggplot2.tidyverse.org/reference/geom_polygon.html) function is used to draw map data. See the [graph #327](https://www.r-graph-gallery.com/327-chloropleth-map-from-geojson-with-ggplot2/) of the [R graph gallery](https://www.r-graph-gallery.com) for more explanation on choropleth maps with ggplot2.
+
+```{r warning=FALSE, message=FALSE}
+# Transform these 2 objects in dataframe, plotable with ggplot2
+afr_cartogram_df <- tidy(afr_cartogram) %>% left_join(. , afr_cartogram@data, by=c("id"="ISO3")) 
+afr_df <- tidy(afr) %>% left_join(. , afr@data, by=c("id"="ISO3")) 
+ 
+# And using the advices of chart #331 we can custom it to get a better result:
+ggplot() +
+  geom_polygon(
+    data = afr_df, 
+    aes(fill = POP2005/1000000, x = long, y = lat, group = group) , 
+    size=0, 
+    alpha=0.9
+  ) +
+  theme_void() +
+  scale_fill_viridis(
+    name="Population (M)", 
+    breaks=c(1,50,100, 140), 
+    guide = guide_legend( 
+      keyheight = unit(3, units = "mm"), 
+      keywidth=unit(12, units = "mm"), 
+      label.position = "bottom", 
+      title.position = 'top', 
+      nrow=1
+    )
+  ) +
+  labs( title = "Africa", subtitle="Population per country in 2005" ) +
+  ylim(-35,35) +
+  theme(
+    text = element_text(color = "#22211d"), 
+    plot.background = element_rect(fill = "#f5f5f4", color = NA), 
+    panel.background = element_rect(fill = "#f5f5f4", color = NA), 
+    legend.background = element_rect(fill = "#f5f5f4", color = NA),
+    plot.title = element_text(
+      size= 22, hjust=0.5, color = "#4e4d47", 
+      margin = margin(b = -0.1, t = 0.4, l = 2, unit = "cm")
+    ),
+    plot.subtitle = element_text(
+      size= 13, hjust=0.5, color = "#4e4d47", 
+      margin = margin(b = -0.1, t = 0.4, l = 2, unit = "cm")
+    ),
+    legend.position = c(0.2, 0.26)
+  ) +
+  coord_map()
+```
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
