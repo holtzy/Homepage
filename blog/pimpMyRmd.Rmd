@@ -1,0 +1,104 @@
+---
+mydisqus: "pimpMyRmd"
+mytitle: "Pimp My R-Markdown"
+mydescription: "April 2018 - 3 minutes read"
+myimage: "rmd_logo.jpg"
+output:
+  html_document:
+      self_contained: false    
+      mathjax: default
+      lib_dir: libs
+      template: template_basic.html
+      theme: "lumen"
+      css: style.css
+      toc: FALSE
+      toc_float: TRUE
+      toc_depth: 2
+      number_sections: TRUE
+      df_print: "paged"
+      code_folding: "hide"
+      includes: 
+        after_body: footer.html
+---
+
+<br><br><br>
+
+<div class="mycontent">
+
+[R markdown](https://rmarkdown.rstudio.com/) creates interactive reports from [R code](https://www.r-project.org/). I’ve created a [document](https://holtzy.github.io/Pimp-my-rmd/) that provides a few tips I use on a daily basis to improve the appearance of my html outputs (my memory aid). This document is built using R Markdown and hosted on [Github](https://github.com/holtzy/Pimp-my-rmd).
+
+You can [access it here](https://holtzy.github.io/Pimp-my-rmd/), and here is a list of the current tips that are displayed:
+
+<br>
+
+<div class = "row">
+
+<div class = "col-md-6">
+- [Text formating](https://holtzy.github.io/Pimp-my-rmd/#text-formatting)
+- [Horizontal line](https://holtzy.github.io/Pimp-my-rmd/#horizontal-line)
+- [Chapter auto numbering](https://holtzy.github.io/Pimp-my-rmd/#auto-numbering)
+- [Skip a line](https://holtzy.github.io/Pimp-my-rmd/#skip-line)
+- [Center an image](https://holtzy.github.io/Pimp-my-rmd/#center-image)
+</div>
+  
+<div class = "col-md-6">
+- [Add footer or header](https://holtzy.github.io/Pimp-my-rmd/#add-footer)
+- [Add space before title](https://holtzy.github.io/Pimp-my-rmd/#add-space)
+- [Add caption to your figures](https://holtzy.github.io/Pimp-my-rmd/#add-caption)
+- [Custom caption](https://holtzy.github.io/Pimp-my-rmd/#custom-caption)
+- [Insert equations](https://holtzy.github.io/Pimp-my-rmd/#insert-equation)
+</div>
+  
+</div>
+
+
+<br>
+
+<div class = "row">
+  
+<div class = "col-md-6">
+- [2 figures in 2 columns](https://holtzy.github.io/Pimp-my-rmd/#2columns)
+- [Use buttons or tabs for sub-chapters](https://holtzy.github.io/Pimp-my-rmd/#buttons)
+- [Use DT for tables- Hide code](https://holtzy.github.io/Pimp-my-rmd/#DT)
+- [Highlight a piece of text with CSS](https://holtzy.github.io/Pimp-my-rmd/#hide-code)
+- [Cache code](https://holtzy.github.io/Pimp-my-rmd/#highlight)
+</div>
+  
+<div class = "col-md-6">
+- [Add a github link in the corner of your document](https://holtzy.github.io/Pimp-my-rmd/#github-link)
+- [Internal link](https://holtzy.github.io/Pimp-my-rmd/#link)
+- [URL linking to a specific section](https://holtzy.github.io/Pimp-my-rmd/#Anchor-URL-link)
+- [Use interactive graphics](https://holtzy.github.io/Pimp-my-rmd/#interactive)
+- [Use a template](https://holtzy.github.io/Pimp-my-rmd/#template)
+</div>
+  
+</div>
+
+<br>
+
+- [Share it online](https://holtzy.github.io/Pimp-my-rmd/#online)
+- [Compile several in a website](https://holtzy.github.io/Pimp-my-rmd/#website)
+- [Create template](https://holtzy.github.io/Pimp-my-rmd/#template-creation)
+- [Add a session info](https://holtzy.github.io/Pimp-my-rmd/#session)
+
+<br>
+
+Of course this list is not exhaustive. If you know some tips that should be added, please advise me! You can comment this post or use the dedicated [GitHub repository](https://github.com/holtzy/Pimp-my-rmd).
+
+This page is linked with the [R graph gallery](http://www.r-graph-gallery.com/). You can also reach me on [twitter](https://twitter.com/r_graph_gallery?lang=en). Thanks to [Rstudio](https://www.rstudio.com/) and to the people who contributed to create such an awesome tool.
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

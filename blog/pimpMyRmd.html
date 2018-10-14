@@ -14,7 +14,7 @@
       gtag('config', 'UA-79254642-5');
     </script>
     
-    <title>Announcing Data To Viz &#8211; Yan Holtz Homepage</title>
+    <title>Pimp My R-Markdown &#8211; Yan Holtz Homepage</title>
     
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,10 +25,10 @@
     <meta name="author" content="Yan Holtz">
     
     <!-- Control appearance when share by social media -->
-    <meta property="og:title" content="Announcing Data To Viz" />
-    <meta property="og:image" content="https://github.com/holtzy/data_to_viz/raw/master/img/section/datatoviz_logo.png" />
+    <meta property="og:title" content="Pimp My R-Markdown" />
+    <meta property="og:image" content="https://github.com/holtzy/data_to_viz/raw/master/img/section/rmd_logo.jpg" />
     <meta property="og:description" content="July 2018 - 6 minutes read" />
-    <meta property='og:url' content="www.yan-holtz.com/dataToViz.html" />
+    <meta property='og:url' content="www.yan-holtz.com/pimpMyRmd.html" />
     <meta property="og:type" content="website" />
 
 
@@ -64,8 +64,8 @@
 <div>
   <br>
   <a href="http://www.yan-holtz.com/blog" style="text-align: left; vertical-align: top; margin-left: 5%;">&larr; Yan Holtz's blog</a>
-  <center><img src="IMG/datatoviz_logo.png"></center>
-  <center><p class="mytitle">Announcing Data To Viz</p></center>
+  <center><img src="IMG/rmd_logo.jpg"></center>
+  <center><p class="mytitle">Pimp My R-Markdown</p></center>
   <center><p class="mysubtitle">July 2018 - 6 minutes read</p></center>
 </div>
 
@@ -188,39 +188,62 @@ $(document).ready(function () {
 </div>
 
 
+<p><br><br><br></p>
 <div class="mycontent">
-<p><br><br><br> I’m delighted to announce a new dataviz project called ‘<a href="https://www.data-to-viz.com">Data to Viz</a>’.<br />
-—&gt; <a href="https://www.data-to-viz.com">data-to-viz.com</a></p>
-<h1 id="what-it-is">What it is</h1>
-<hr />
-<p><a href="https://www.data-to-viz.com">From Data to Viz</a> is a classification of chart types based on input data format. It comes in the form of a decision tree leading to a set of potentially appropriate visualizations to represent the dataset.</p>
-<p>The decision trees are available in a <a href="https://www.data-to-viz.com/poster.html">poster</a> that has been presented at the <a href="https://user2018.r-project.org/">UseR conference</a> in Brisbane.</p>
-<div class="figure">
-<img src="IMG/poster_medium.png" />
-
-</div>
-<h1 id="philosophy">Philosophy</h1>
-<hr />
-<p>The project is built on two underlying philosophies. First, that most data analysis can be summarized in about twenty different dataset formats. Second, that both data and context determine the appropriate chart. Thus, our suggested method consists in identifying and trying all feasible chart types to find out which suits your data and idea best. Once this set of graphic identified, <a href="https://www.data-to-viz.com">data-to-viz.com</a> aims to guide you toward the best decision.</p>
-<h1 id="content">Content</h1>
-<hr />
-<p>Several sections are available on top of the decision tree:</p>
-<p>– <a href="https://www.data-to-viz.com/index.html#portfolio">portfolio</a> : an overview of all chart possibilities. For each, an extensive description is given, showing variations, pros and cons, common pitfalls and more.</p>
-<p>– <a href="https://www.data-to-viz.com/index.html#story">stories</a> : for each input data format, a real life example is analyzed to illustrate the different chart types applicable to it.</p>
-<p>– <a href="https://www.data-to-viz.com/caveats.html">caveat gallery</a> : a list of common dataviz pitfalls, with suggested workarounds.</p>
-<div class="figure">
-<img src="IMG/caveat_gallery_overview.png" />
-
-</div>
-<h1 id="link-with-r">Link with R</h1>
-<hr />
-<p>From Data to Viz aims to give general advices for data visualization in general and is not targeting <a href="https://www.r-graph-gallery.com">R</a> users especialy. However, 100% of the charts are made using R, mostly using <a href="https://www.r-graph-gallery.com/portfolio/ggplot2-package/">ggplot2</a> and the tidyverse. The reproducible code snippets are always available. The biggest part of the website is built using R Markdown, using a good amount of <a href="https://holtzy.github.io/Pimp-my-rmd/">hacks described here</a>.</p>
-<p>The website is tightly linked with the <a href="https://www.r-graph-gallery.com/">R graph gallery</a>. Once you’ve identified the graphic that suits your needs, you will be redirected to the appropriate section of the gallery to get the R code in minutes.</p>
-<h1 id="next-step">Next step</h1>
-<hr />
-<p>From Data to Viz is still in beta version, and a lot remains to be done. The <a href="http://www.data-to-viz.com/caveats.html">caveat gallery</a> is incomplete and some chart types are missing. Also, a few inaccuracies may be present in the decision tree. Last but not least the English is horrible but this is not likely to change unfortunately, I apologize for that.</p>
-<p>If you find any mistake or potential improvement, please fill an issue on <a href="https://github.com/holtzy/data_to_viz">GitHub</a>, contact me at <a href="Yan.holtz.data@gmail.com" class="uri">Yan.holtz.data@gmail.com</a> or on <a href="https://twitter.com/R_Graph_Gallery">twitter</a>, or leave a comment below. Any feedback will be very welcome!</p>
+<p><a href="https://rmarkdown.rstudio.com/">R markdown</a> creates interactive reports from <a href="https://www.r-project.org/">R code</a>. I’ve created a <a href="https://holtzy.github.io/Pimp-my-rmd/">document</a> that provides a few tips I use on a daily basis to improve the appearance of my html outputs (my memory aid). This document is built using R Markdown and hosted on <a href="https://github.com/holtzy/Pimp-my-rmd">Github</a>.</p>
+<p>You can <a href="https://holtzy.github.io/Pimp-my-rmd/">access it here</a>, and here is a list of the current tips that are displayed:</p>
 <p><br></p>
+<div class="row">
+<div class="col-md-6">
+<ul>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#text-formatting">Text formating</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#horizontal-line">Horizontal line</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#auto-numbering">Chapter auto numbering</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#skip-line">Skip a line</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#center-image">Center an image</a></li>
+</ul>
+</div>
+<div class="col-md-6">
+<ul>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#add-footer">Add footer or header</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#add-space">Add space before title</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#add-caption">Add caption to your figures</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#custom-caption">Custom caption</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#insert-equation">Insert equations</a></li>
+</ul>
+</div>
+</div>
+<p><br></p>
+<div class="row">
+<div class="col-md-6">
+<ul>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#2columns">2 figures in 2 columns</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#buttons">Use buttons or tabs for sub-chapters</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#DT">Use DT for tables- Hide code</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#hide-code">Highlight a piece of text with CSS</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#highlight">Cache code</a></li>
+</ul>
+</div>
+<div class="col-md-6">
+<ul>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#github-link">Add a github link in the corner of your document</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#link">Internal link</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#Anchor-URL-link">URL linking to a specific section</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#interactive">Use interactive graphics</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#template">Use a template</a></li>
+</ul>
+</div>
+</div>
+<p><br></p>
+<ul>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#online">Share it online</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#website">Compile several in a website</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#template-creation">Create template</a></li>
+<li><a href="https://holtzy.github.io/Pimp-my-rmd/#session">Add a session info</a></li>
+</ul>
+<p><br></p>
+<p>Of course this list is not exhaustive. If you know some tips that should be added, please advise me! You can comment this post or use the dedicated <a href="https://github.com/holtzy/Pimp-my-rmd">GitHub repository</a>.</p>
+<p>This page is linked with the <a href="http://www.r-graph-gallery.com/">R graph gallery</a>. You can also reach me on <a href="https://twitter.com/r_graph_gallery?lang=en">twitter</a>. Thanks to <a href="https://www.rstudio.com/">Rstudio</a> and to the people who contributed to create such an awesome tool.</p>
 </div>
 
 
@@ -231,8 +254,8 @@ $(document).ready(function () {
         <script>
 
         var disqus_config = function () {
-        this.page.url = www.yan-holtz.com/graph/dataToViz.html;  
-        this.page.identifier = dataToViz; 
+        this.page.url = www.yan-holtz.com/graph/pimpMyRmd.html;  
+        this.page.identifier = pimpMyRmd; 
         };
 
         (function() { // DON'T EDIT BELOW THIS LINE

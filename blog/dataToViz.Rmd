@@ -1,7 +1,7 @@
 ---
 mydisqus: "dataToViz"
 mytitle: "Announcing \nData To Viz"
-mydescription: ""
+mydescription: "July 2018 - 6 minutes read"
 myimage: "datatoviz_logo.png"
 output:
   html_document:
