@@ -2,18 +2,18 @@
 <rss version="2.0">
 
 <channel>
-  <title>W3Schools Home Page</title>
-  <link>https://www.w3schools.com</link>
-  <description>Free web building tutorials</description>
+  <title>Yan Holtz Homepage</title>
+  <link>https://www.yan-holtz.com</link>
+  <description>Yan Holtz's blog on statistics, R and Dataviz</description>
   <item>
-    <title>RSS Tutorial</title>
-    <link>https://www.w3schools.com/xml/xml_rss.asp</link>
-    <description>New RSS tutorial on W3Schools</description>
+    <title>From Data to Viz - A classification of graphics based on input data format</title>
+    <link>https://www.yan-holtz.com/blog/dataToViz.html</link>
+    <description>From Data to Viz is a classification of chart types based on input data format. It comes in the form of a decision tree leading to a set of potentially appropriate visualizations to represent the dataset.</description>
   </item>
   <item>
-    <title>XML Tutorial</title>
-    <link>https://www.w3schools.com/xml</link>
-    <description>New XML tutorial on W3Schools</description>
+    <title>Pimp my R-Markdown</title>
+    <link>https://www.yan-holtz.com/blog/pimpMyRmd.html</link>
+    <description>R markdown creates interactive reports from R code. I’ve created a document that provides a few tips I use on a daily basis to improve the appearance of my html outputs.</description>
   </item>
 </channel>
 
