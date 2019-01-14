@@ -211,33 +211,82 @@
 
 
 <!-- =======================  SERVICES SECTION ======================= -->
+<style>
+
+.collapse:not(.show) {
+    height: 42px !important;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.collapsing {
+    min-height: 42px !important;
+}
+.collapsed:after  {
+    content: '+ Read More';
+}
+
+</style>
+
+
+
+<style>
+.services-logo {
+  margin: 15px;
+  color: #69b3a2;
+  font-size: 45px;
+  padding: 30px;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 5px;
+  border: solid;
+}
+.services-logo:hover {
+  color: white;
+  background-color: #69b3a2;
+}
+
+</style>
 
 <section id="services" class="bg" >
   <div class="container" >
     <div class="row">
       <div class="col-lg-12 text-center" style="padding-bottom: 3%">
-        <p style="display:inline; font-size: 35px">SERVICES</p>
+        <p style="display:inline; font-size: 35px">What can I do for you?</p>
         <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
-        <center><h3 style="max-width: 500px;  line-height: 27px;" class="section-subheading text-muted">My goal is to help you make better use of your data. My expertise can be used to clean, analyse, interpret and visualize your data.</h3></center>
+        <center><h3 style="max-width: 500px;  line-height: 27px;" class="section-subheading text-muted">Let me help make better use of your data. My expertise can be used to clean, analyse, interpret and visualize your data.</h3></center>
       </div>
     </div>
 
   <div class="row">
+
     <div class="col-lg-3 text-center">
-      <i style="margin: 15px; color: #69b3a2; font-size: 45px; padding: 30px; border-radius: 50%; border-color: black; border-width: 5px; border: solid;" class="fa fa-wrench"></i>
-      <h4>Data Management</h4>
+      <a data-toggle="modal" href="#dataManagement"><i class="fa fa-wrench services-logo"></i></a>
+      <a data-toggle="modal" href="#dataManagement"><h4>Data Management</h4></a>
+      <p>Harvesting data from an API? Cleaning messy spreadsheets? reproducible data preparation workflow?</p>
+      <a data-toggle="modal" href="#dataManagement" style="font-size: 23px">+</a>
     </div>
+
     <div class="col-lg-3 text-center">
-      <i style="margin: 15px; color: #69b3a2; font-size: 45px; padding: 30px; border-radius: 50%; border-color: black; border-width: 5px; border: solid;" class="fa fa-search"></i>
-      <h4>Data Mining</h4>
+      <a data-toggle="modal" href="#dataManagement"><i class="fa fa-search services-logo"></i></a>
+      <a data-toggle="modal" href="#dataManagement"><h4>Data Mining</h4></a>
+      <p>Let me crunch the number for you and find the hidden insight in your data.</p>
+      <a data-toggle="modal" href="#dataManagement" style="font-size: 23px">+</a>
     </div>
+
     <div class="col-lg-3 text-center">
-        <i style="margin: 15px; color: #69b3a2; font-size: 45px; padding: 30px; border-radius: 50%; border-color: black; border-width: 5px; border: solid;" class="fa fa-bar-chart"></i>
-        <h4>Dataviz</h4>
+      <a data-toggle="modal" href="#dataManagement"><i class="fa fa-bar-chart services-logo"></i></a>
+      <a data-toggle="modal" href="#dataManagement"><h4>Dataviz</h4></a>
+      <p>Needs to convey your results efficiently? I can build stunning dataviz or dashboards</p>
+      <a data-toggle="modal" href="#dataManagement" style="font-size: 23px">+</a>
     </div>
+
     <div class="col-lg-3 text-center">
-      <i style="margin: 15px; color: #69b3a2; font-size: 45px; padding: 30px; border-radius: 50%; border-color: black; border-width: 5px; border: solid;" class="fa fa-university"></i>
-      <h4>Teaching & Training</h4>
+      <a data-toggle="modal" href="#dataManagement"><i class="fa fa-university services-logo"></i></a>
+      <a data-toggle="modal" href="#dataManagement"><h4>Teaching & Training</h4></a>
+      <p>I love sharing my passion for analytics and dataviz: make your team better.</p>
+      <a data-toggle="modal" href="#dataManagement" style="font-size: 23px">+</a>
     </div>
 
     </div>
@@ -409,7 +458,7 @@
 
 
           <div class="col-md-3 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <a class="portfolio-link" data-toggle="modal" href="#violin">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <p>The Como Project</p>
@@ -637,6 +686,12 @@
 
 
 <!-- ======================= CONTACT SECTION =============================== -->
+
+
+
+
+
+
 
 
 
@@ -1000,58 +1055,10 @@
 
 <!-- =================== MODAL SECTION ===================================== -->
 
-    <!-- Poster FULL -->
-    <div class="portfolio-modal modal fade" id="greentech" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog h-100" style="max-width: 100vw;">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                   <p style="display:inline; font-size: 35px; margin-top: 60px">The GreenTech Challenge</p>
-                      <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
-                      <br>
-                      <ul class="list-inline social-buttons">
-                        <li class="list-inline-item">
-                          <a href="https://twitter.com/R_Graph_Gallery">
-                            <i class="fa fa-twitter"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item social-buttons">
-                          <a href="https://github.com/holtzy">
-                            <i class="fa fa-github" style="color: white"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item social-buttons">
-                          <a href="https://www.linkedin.com/in/yan-holtz-2477534a/">
-                            <i class="fa fa-linkedin"></i>
-                          </a>
-                        </li>
-                      </ul>
-                      <br><br>
-                      <p>Yan Holtz's <u>blog</u> on statistics, R and Dataviz. More or less linked with our world, always related to data.</p>
-                      <h1>Something</h1>
-                      <hr>
-                      <p>blaaaaa</p>
 
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-    <!-- Violin -->
-    <div class="portfolio-modal modal fade" id="violin" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
+    <!-- Data management -->
+    <center><div class="portfolio-modal modal fade" id="dataManagement" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
             <div class="lr">
@@ -1062,81 +1069,42 @@
             <div class="row">
               <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <a href="graph/violin.html"><img class="img-fluid d-block mx-auto" src="img/section/Violin150.png" alt=""></a>
-
-                  <a href="graph/violin.html"><h2 class="text-uppercase">Violin</h2></a>
-                  <p class="item-intro text-muted">An alternative to boxplot to compare the distribution of several groups.</p>
-                  <div class="cardtitle">About</div>
-                  <hr>
-                  <p style="text-align: justify">Violinplots allow to visualize the distribution of a numeric variable for one or several groups. It is really close from a <a href="caveat/boxplot.html">boxplot</a>, but allows a deeper understanding of the distribution. <br><br>Violins are particularly adapted when the amount of data is huge and showing individual observations gets impossible.</p>
-
-                  <div class="cardtitle">Common Mistakes</div>
-                  <hr>
-                  <div style="text-align: left !important;"><ul><li>If you have just a few groups, you are probably interested by <a href="graph/ridgeline.html">ridgeline charts</a>.</li><li>If you compare groups with very different sample size, <a href="caveat/boxplot.html">show it</a>.</li><li><a href="caveat/order_data.html">Ordering groups</a> by median value makes the chart more insightful.</li></ul><br></div>
-
-                  <div class="cardtitle">Code</div>
-                  <hr>
-                  <p>
-                  <a href="https://www.r-graph-gallery.com/violin-plot/" class="btn btn-primary">R graph gallery</a>
-                  <a href="https://python-graph-gallery.com/violin-plot/" class="btn btn-primary">Python gallery</a>
-                  </p>
-
-                  <div class="cardtitle">Read More</div>
-                  <hr>
-                  <p style="text-align: justify">See the <a href="graph/violin.html">dedicated page</a>.</p>
-                </div>
+                  <i class="fa fa-wrench services-logo"></i>
+                  <h4>Data Management</h4>
+                  <p style="max-width: 600px">A data project always start with a data enginering step. You need to harvest data and store it in an adequate format to be able to use it.</p>
+                  <div style="text-align: left">
+                    <h6>I can help you to..</h6>
+                    <hr>
+                    <ul>
+                      <li><u>Harvest</u> data from different sources like APIs, SQL databases or messy Excel spreadsheets.</li>
+                      <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
+                      <li><u>Clean</u> datasets removing outliers and abberant data.</li>
+                      <li>Create reproducible data preparation <u>workflows</u></li>
+                      <li><u>Automatize</u> the creation of data related reports</li>
+                    </ul>
+                    <br>
+                    <h6>Example:</h6>
+                    <hr>
+                    <ul>
+                      <li><u>Harvest</u> data from different sources like APIs, SQL databases or messy Excel spreadsheets.</li>
+                      <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
+                    </ul>
+                    <br>
+                    <h6>Contact me</h6>
+                    <hr>
+                    <span>Tell me more about your project at <a href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work together.</span>
+                    <div style="margin-top: 5px;">
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/holtzy/data_to_viz">Github</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://twitter.com/R_Graph_Gallery">Twitter</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:yan.holtz.data@gmail.com">Mail</a>
+                     </div>
+                  </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-<!-- Hierarchical edge bundling -->
-    <div class="portfolio-modal modal fade" id="bundle" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <a href="graph/edge_bundling.html"><img class="img-fluid d-block mx-auto" src="img/section/Bundle150.png" alt=""></a>
-
-                  <a href="graph/edge_bundling.html"><h2 class="text-uppercase">Hierarchical edge bundling</h2></a>
-                  <p class="item-intro text-muted">A network structure where nodes are aligned.</p>
-                  <div class="cardtitle">About</div>
-                  <hr>
-                  <p style="text-align: justify"><a href="graph/edge_bundling.html">Hierarchical edge bundling</a> is a data visualisation method allowing to check connections between leaves of a hierarchical network.<br><br>Instead of using straight line to do so, each connection is curved and follow the hierarchical path between the 2 nodes. This technique minimize the clutter and allows to detect trends more efficiently.</p>
-
-                  <div class="cardtitle">Common Mistakes</div>
-                  <hr>
-                  <div style="text-align: left !important"><ul><li>Play with bin size / bandwidth.</li><li>Useful only if sample size is huge.</li><li>Pick up a good color palette.</li></ul></div>
-
-                  <div class="cardtitle">Code</div>
-                  <hr>
-                  <p>
-                  <a href="https://www.r-graph-gallery.com/hierarchical-edge-bundling/" class="btn btn-primary">R graph gallery</a>
-                  </p>
-
-                  <div class="cardtitle">Read More</div>
-                  <hr>
-                  <p style="text-align: justify">See the <a href="graph/edge_bundling.html">dedicated page</a>.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
+    </div></center>
 
 <!-- ======================================================================= -->
 
@@ -1161,31 +1129,11 @@
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-    <script src="js/portfolio.js"></script>
-    <script src="js/tree.js"></script>
 
     <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
-
-    <script>
-      showTree('num');
-    </script>
-
-    <!-- Activate the bootstrap tooltip, must be after jQuery load -->
-    <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-    </script>
-
-
-
-
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
