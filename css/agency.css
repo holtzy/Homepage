@@ -432,6 +432,12 @@ header.masthead .intro-text .intro-heading {
 }
 
 
+.column {
+    display: none; /* Hide all elements by default */
+}
+.show {
+  display: block;
+}
 
 
 

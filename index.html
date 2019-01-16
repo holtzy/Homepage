@@ -212,26 +212,6 @@
 
 <!-- =======================  SERVICES SECTION ======================= -->
 <style>
-
-.collapse:not(.show) {
-    height: 42px !important;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-.collapsing {
-    min-height: 42px !important;
-}
-.collapsed:after  {
-    content: '+ Read More';
-}
-
-</style>
-
-
-
-<style>
 .services-logo {
   margin: 15px;
   color: #69b3a2;
@@ -246,7 +226,6 @@
   color: white;
   background-color: #69b3a2;
 }
-
 </style>
 
 <section id="services" class="bg" >
@@ -264,29 +243,29 @@
     <div class="col-lg-3 text-center">
       <a data-toggle="modal" href="#dataManagement"><i class="fa fa-wrench services-logo"></i></a>
       <a data-toggle="modal" href="#dataManagement"><h4>Data Management</h4></a>
-      <p>Harvesting data from an API? Cleaning messy spreadsheets? reproducible data preparation workflow?</p>
+      <p>Data harvesting, cleaning and reshaping. Let's build an automated workflow.</p>
       <a data-toggle="modal" href="#dataManagement" style="font-size: 23px">+</a>
     </div>
 
     <div class="col-lg-3 text-center">
-      <a data-toggle="modal" href="#dataManagement"><i class="fa fa-search services-logo"></i></a>
-      <a data-toggle="modal" href="#dataManagement"><h4>Data Mining</h4></a>
+      <a data-toggle="modal" href="#dataMining"><i class="fa fa-search services-logo"></i></a>
+      <a data-toggle="modal" href="#dataMining"><h4>Data Mining</h4></a>
       <p>Let me crunch the number for you and find the hidden insight in your data.</p>
-      <a data-toggle="modal" href="#dataManagement" style="font-size: 23px">+</a>
+      <a data-toggle="modal" href="#dataMining" style="font-size: 23px">+</a>
     </div>
 
     <div class="col-lg-3 text-center">
-      <a data-toggle="modal" href="#dataManagement"><i class="fa fa-bar-chart services-logo"></i></a>
-      <a data-toggle="modal" href="#dataManagement"><h4>Dataviz</h4></a>
-      <p>Needs to convey your results efficiently? I can build stunning dataviz or dashboards</p>
-      <a data-toggle="modal" href="#dataManagement" style="font-size: 23px">+</a>
+      <a data-toggle="modal" href="#dataViz"><i class="fa fa-bar-chart services-logo"></i></a>
+      <a data-toggle="modal" href="#dataViz"><h4>Dataviz</h4></a>
+      <p>I can build stunning dataviz or dashboards to convey your results efficiently.</p>
+      <a data-toggle="modal" href="#dataViz" style="font-size: 23px">+</a>
     </div>
 
     <div class="col-lg-3 text-center">
-      <a data-toggle="modal" href="#dataManagement"><i class="fa fa-university services-logo"></i></a>
-      <a data-toggle="modal" href="#dataManagement"><h4>Teaching & Training</h4></a>
-      <p>I love sharing my passion for analytics and dataviz: make your team better.</p>
-      <a data-toggle="modal" href="#dataManagement" style="font-size: 23px">+</a>
+      <a data-toggle="modal" href="#teaching"><i class="fa fa-university services-logo"></i></a>
+      <a data-toggle="modal" href="#teaching"><h4>Teaching & Training</h4></a>
+      <p>I love sharing my passion for analytics and dataviz. See what courses I have for your team.</p>
+      <a data-toggle="modal" href="#teaching" style="font-size: 23px">+</a>
     </div>
 
     </div>
@@ -307,9 +286,6 @@
 
 
 <!-- ======================== BLOG SECTION ============================ -->
-
-
-
     <section id="blog" class="bg-light">
       <div class="container">
         <div class="row">
@@ -354,35 +330,42 @@
 
   <section class="" id="website" style="padding-top: 0px; padding-bottom: 0px">
     <div class="parallaxwebsite">
-        <div class="container">
-          <div class="row text-center">
+        <div class="container" style="padding-top: 80px; padding-bottom: 80px">
 
-            <div class="col-lg-2 text-center"></div>
-            <div class="col-lg-8 text-center">
-              <br><br><br><br>
-              <p>I've developped several websites dedicated to data visualization. These resources are visited thousands of time every day.</p>
+          <div class="row" >
+            <div class="col-lg-12 text-center" style="padding-bottom: 3%">
+              <p style="display:inline; font-size: 35px">Websites</p>
+              <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
+              <center><h3 style="max-width: 500px;  line-height: 27px;" class="section-subheading text-muted">I've developped several websites dedicated to data visualization. These resources are visited about 30.000 times a day.</h3></center>
             </div>
           </div>
 
-          <br><br><br>
+          <br><br>
 
-          <div class="row text-center" style="padding-top: 0%; padding-bottom: 0% ">
-            <div class="col-lg-4 col-md-6 text-center">
-              <h2 class="text-uppercase" style="border-bottom: solid; border-width: 1px; font-size: 29px">R Graph Gallery</h2>
-              <p style="color: grey">Thousands of R graphics, always with the reproducible code provided</p>
-              <a href="https://www.r-graph-gallery.com" class="btn btn-secondary">Visit</a>
-            </div>
+          <div class="row text-center">
 
-            <div class="col-lg-4 col-md-6 text-center">
-              <h2 class="text-uppercase" style="border-bottom: solid; border-width: 1px; font-size: 29px">Data To Viz</h2>
+            <div class="col-lg-3 col-md-6 text-center" style="margin-bottom: 30px">
+              <h2 class="text-uppercase" style="border-bottom: solid; border-width: 1px; font-size: 29px">from Data To Viz</h2>
               <p style="color: grey">A classification of charts based on their input format, and a lot of trick and tips</p>
               <a href="https://www.data-to-viz.com" class="btn btn-secondary">Visit</a>
             </div>
 
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-3 col-md-6 text-center" style="margin-bottom: 30px">
+              <h2 class="text-uppercase" style="border-bottom: solid; border-width: 1px; font-size: 29px">R Graph Gallery</h2>
+              <p style="color: grey">Hundreds of R graphics, always with the reproducible code provided.</p>
+              <a href="https://www.r-graph-gallery.com" class="btn btn-secondary">Visit</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center" style="margin-bottom: 30px">
               <h2 class="text-uppercase" style="border-bottom: solid; border-width: 1px; font-size: 29px">Python Gallery</h2>
-              <p style="color: grey">Thousands of Python graphics, always with the reproducible code provided</p>
+              <p style="color: grey">A gallery of charts made with python, with a focus on Matplotlib and Seaborn.</p>
               <a href="https://www.python-graph-gallery.com" class="btn btn-secondary">Visit</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center" style="margin-bottom: 30px">
+              <h2 class="text-uppercase" style="border-bottom: solid; border-width: 1px; font-size: 29px">D3 Graph Gallery</h2>
+              <p style="color: grey">D3 is the ultimate tool for data visualization on the web. Tedious but limitless.</p>
+              <a href="https://www.d3-graph-gallery.com" class="btn btn-secondary">Visit</a>
             </div>
 
            </div>
@@ -416,10 +399,11 @@
             <h3 class="section-subheading text-muted">A glimpse of the projects I've been working on</h3>
             <div id="portfolio-button-container">
               <button class="btn btn-secondary active" data-portfolio-section="all">Show all</button>
-              <button class="btn btn-secondary" data-portfolio-section="distribution">Dataviz</button>
-              <button class="btn btn-secondary" data-portfolio-section="correlation">Scientific paper</button>
-              <button class="btn btn-secondary" data-portfolio-section="ranking">Dashboard</button>
-              <button class="btn btn-secondary" data-portfolio-section="partofawhole">Shiny</button>
+              <button class="btn btn-secondary" data-portfolio-section="mining">Data mining</button>
+              <button class="btn btn-secondary" data-portfolio-section="dataviz">Dataviz</button>
+              <button class="btn btn-secondary" data-portfolio-section="paper">Scientific paper</button>
+              <button class="btn btn-secondary" data-portfolio-section="dashboard">Dashboard</button>
+              <button class="btn btn-secondary" data-portfolio-section="shiny">Shiny</button>
             </div>
             <br>
           </div>
@@ -429,13 +413,13 @@
 
 
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+          <div class="col-md-3 col-sm-6 portfolio-item show column dataviz paper dashboard shiny">
+            <a class="portfolio-link" data-toggle="modal" href="#ukbGeoApp">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <p>Genetics in the UK</p>
                   <hr>
-                  <p class="explanation_portfolio">Assessing the geographic distribution of genetic traits<br><br><i>Coming soon (paper under review)</i></p>
+                  <p class="explanation_portfolio">Assessing the geographic distribution of genetic traits<br></p>
                 </div>
               </div>
               <img class="img-fluid" src="img/portfolio/UKB_geo.png" alt="">
@@ -443,8 +427,8 @@
           </div>
 
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
-            <a class="portfolio-link" target="_blank" href="https://www.r-graph-gallery.com/the-genetic-map-comparator/">
+          <div class="col-md-3 col-sm-6 portfolio-item show column dataviz paper dashboard shiny">
+            <a class="portfolio-link" data-toggle="modal" href="#genMapComp">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <p>Genetic Map Comparator</p>
@@ -457,7 +441,7 @@
           </div>
 
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
+          <div class="col-md-3 col-sm-6 portfolio-item show column dataviz paper shiny">
             <a class="portfolio-link" data-toggle="modal" href="#violin">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -470,7 +454,7 @@
             </a>
           </div>
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
+          <div class="col-md-3 col-sm-6 portfolio-item show column dataviz mining">
             <a class="portfolio-link" target="_blank" href="https://www.data-to-viz.com/story/AdjacencyMatrix.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -483,7 +467,7 @@
             </a>
           </div>
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
+          <div class="col-md-3 col-sm-6 portfolio-item show  column dataviz ">
             <a class="portfolio-link" href="blog/dataToViz.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -497,7 +481,7 @@
           </div>
 
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
+          <div class="col-md-3 col-sm-6 portfolio-item show column dashboard shiny mining">
             <a class="portfolio-link" target="_blank" href="https://github.com/holtzy/GreenTech-Challenge/blob/master/README.md">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -511,7 +495,7 @@
           </div>
 
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
+          <div class="col-md-3 col-sm-6 portfolio-item show column paper dashboard shiny">
             <a class="portfolio-link"  target="_blank" href="https://github.com/holtzy/Unics/blob/master/README.md">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -525,7 +509,7 @@
           </div>
 
 
-          <div class="col-md-3 col-sm-6 portfolio-item" style="background-color: white;">
+          <div class="col-md-3 col-sm-6 portfolio-item show column mining" style="background-color: white;">
             <a class="portfolio-link"  target="_blank" href="https://holtzy.github.io/Crypto-Arbitrage/">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -539,7 +523,7 @@
           </div>
 
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
+          <div class="col-md-3 col-sm-6 portfolio-item show column mining">
             <a class="portfolio-link"  target="_blank" href="https://www.data-to-viz.com/story/MapConnection.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -553,7 +537,7 @@
           </div>
 
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
+          <div class="col-md-3 col-sm-6 portfolio-item show column paper mining">
             <a class="portfolio-link"  target="_blank" href="https://link.springer.com/article/10.1007/s00122-017-2904-6">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -566,7 +550,7 @@
             </a>
           </div>
 
-          <div class="col-md-3 col-sm-6 portfolio-item">
+          <div class="col-md-3 col-sm-6 portfolio-item show column paper mining">
             <a class="portfolio-link"  target="_blank" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0154609">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -686,14 +670,6 @@
 
 
 <!-- ======================= CONTACT SECTION =============================== -->
-
-
-
-
-
-
-
-
 
   <section id="contact" class="bg-light">
      <div class="container">
@@ -1106,6 +1082,247 @@
       </div>
     </div></center>
 
+
+    <!-- Data mining -->
+    <center><div class="portfolio-modal modal fade" id="dataMining" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <i class="fa fa-search services-logo"></i>
+                  <h4>Data Mining</h4>
+                  <p style="max-width: 600px">Crunch the data to get answer to your question. Give insight to the information.</p>
+                  <div style="text-align: left">
+                    <h6>I can help you to..</h6>
+                    <hr>
+                    <ul>
+                      <li><u>Exploratory analysis</u> of a dataset.</li>
+                      <li>Creation of clean and reproducible <u>reports</u> using R Markdown.</li>
+                      <li>Application of <u>statistical methods</u>.</li>
+                    </ul>
+                    <br>
+                    <h6>Example:</h6>
+                    <hr>
+                    <ul>
+                      <li><u>Harvest</u> data from different sources like APIs, SQL databases or messy Excel spreadsheets.</li>
+                      <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
+                    </ul>
+                    <br>
+                    <h6>Contact me</h6>
+                    <hr>
+                    <span>Tell me more about your project at <a href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work together.</span>
+                    <div style="margin-top: 5px;">
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/holtzy/data_to_viz">Github</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://twitter.com/R_Graph_Gallery">Twitter</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:yan.holtz.data@gmail.com">Mail</a>
+                     </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></center>
+
+
+
+    <!-- Data viz -->
+    <center><div class="portfolio-modal modal fade" id="dataViz" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <i class="fa fa-bar-chart services-logo"></i>
+                  <h4>Data Visualization</h4>
+                  <p style="max-width: 600px">A data project always start with a data enginering step. You need to harvest data and store it in an adequate format to be able to use it.</p>
+                  <div style="text-align: left">
+                    <h6>I can help you with:</h6>
+                    <hr>
+                    <ul>
+                      <li>Creation and review of graphs for <u>scientific publication</u>.</li>
+                      <li>Development of <u>data application</u> using R and Shiny.</li>
+                      <li>Creation of custom <u>data visualization for the web</u> using d3.js.</li>
+                      <li><u>Dashboard</u> creation for real time data analysis.</li>
+                      <li>Visualization of <u>geospatial</u> data.</li>
+                    </ul>
+                    <br>
+                    <h6>Example:</h6>
+                    <hr>
+                    <ul>
+                      <li><u>Harvest</u> data from different sources like APIs, SQL databases or messy Excel spreadsheets.</li>
+                      <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
+                    </ul>
+                    <br>
+                    <h6>Contact me</h6>
+                    <hr>
+                    <span>Tell me more about your project at <a href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work together.</span>
+                    <div style="margin-top: 5px;">
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/holtzy/data_to_viz">Github</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://twitter.com/R_Graph_Gallery">Twitter</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:yan.holtz.data@gmail.com">Mail</a>
+                     </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></center>
+
+
+    <!-- Teaching -->
+    <center><div class="portfolio-modal modal fade" id="teaching" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <i class="fa fa-university services-logo"></i>
+                  <h4>Teaching & Training</h4>
+                  <p style="max-width: 600px">A data project always start with a data enginering step. You need to harvest data and store it in an adequate format to be able to use it.</p>
+                  <div style="text-align: left">
+                    <h6>I can help you to..</h6>
+                    <hr>
+                    <ul>
+                      <li><u>Harvest</u> data from different sources like APIs, SQL databases or messy Excel spreadsheets.</li>
+                      <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
+                      <li><u>Clean</u> datasets removing outliers and abberant data.</li>
+                      <li>Create reproducible data preparation <u>workflows</u></li>
+                      <li><u>Automatize</u> the creation of data related reports</li>
+                    </ul>
+                    <br>
+                    <h6>Example:</h6>
+                    <hr>
+                    <ul>
+                      <li><u>Harvest</u> data from different sources like APIs, SQL databases or messy Excel spreadsheets.</li>
+                      <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
+                    </ul>
+                    <br>
+                    <h6>Contact me</h6>
+                    <hr>
+                    <span>Tell me more about your project at <a href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work together.</span>
+                    <div style="margin-top: 5px;">
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/holtzy/data_to_viz">Github</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://twitter.com/R_Graph_Gallery">Twitter</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:yan.holtz.data@gmail.com">Mail</a>
+                     </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></center>
+
+
+
+    <!-- UKB geo application -->
+    <center><div class="portfolio-modal modal fade" id="ukbGeoApp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/UKB_geo.png" width="180px"></img>
+                  <h4>Geographical distribution of genetic traits.</h4>
+                  <p style="max-width: 600px">A web application allowing to visualize the geographical distribution of ~200 genetic related traits in the UK.</p>
+                  <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://holtzyan.shinyapps.io/UKB_geo/">Online app</a>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>A group of researcher from the <a href="https://imb.uq.edu.au">Institute of Molecular Bioscience</a> investigated the geographic clustering of genetic variants that influence complex traits and disease risk in a sample of ~450,000 individuals from Great Britain.</p>
+                    <p>I built a web application that goes in support of the paper intitled <a href="https://www.biorxiv.org/content/early/2018/10/30/457515">Genetic Consequences of Social Stratification in Great Britain</a>.</p>
+                    <img src="img/portfolio/ukbGeoDemo.png" width="100%"></img>
+                    <p>The <a href="https://holtzyan.shinyapps.io/UKB_geo/">shiny application</a> allows to visualize the geographic distribution of any trait. It allows to custom color scales, region shape and to apply a <a href="https://www.data-to-viz.com/graph/cartogram.html">cartogram</a> algorithm to the map. Moreover, the tool allows one to upload its <u>own data</u> to benefit this dataviz tool.</p>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>The web application is available <a href="https://holtzyan.shinyapps.io/UKB_geo/">online</a>. You can read the scientific paper on <a href="https://www.biorxiv.org/content/early/2018/10/30/457515">BioArXiv</a>. The source code of the project are of course on <a href="https://github.com/holtzy/UKB_geo_application">Github</a>.</span>
+                    <div style="margin-top: 5px;">
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://holtzyan.shinyapps.io/UKB_geo/">Online app</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/holtzy/UKB_geo_application">Github</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://www.biorxiv.org/content/early/2018/10/30/457515">Paper</a>
+                     </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></center>
+
+
+
+    <!-- Genetic Map Comparator -->
+    <center><div class="portfolio-modal modal fade" id="genMapComp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/GenMapComp.png" width="180px"></img>
+                  <h4>The Genetic Map Comparator.</h4>
+                  <p style="max-width: 600px">A web application made to compare genetic maps.</p>
+                  <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="http://www.agap-sunshine.inra.fr/genmapcomp/">Online app</a>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>Building and comparing genetic maps between several populations is a common task for geneticists.</p>
+                    <p>We've created an <a href="http://www.agap-sunshine.inra.fr/genmapcomp/">online tool</a> allowing to upload your maps and characterize and visualize them. Several interactive graphs are available with export options and more. The tool was created using <code>R</code> and <code>Shiny</code>, plus several <code>Html widgets</code> for interactivity.</p>
+                    <center><img src="img/portfolio/genmapcomp.jpg" width="80%"></img></center>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>The web application is available <a href="http://www.agap-sunshine.inra.fr/genmapcomp/">online</a>. You can read the scientific paper on <a href="https://academic.oup.com/bioinformatics/article-abstract/33/9/1387/2908431/The-genetic-map-comparator-a-user-friendly?redirectedFrom=fulltext">Bioinformatics</a>. The source code of the project are on <a href="https://github.com/holtzy/GenMap-Comparator">Github</a>.</span>
+                    <div style="margin-top: 5px;">
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="http://www.agap-sunshine.inra.fr/genmapcomp/">Online app</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/holtzy/GenMap-Comparator">Github</a>
+                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://academic.oup.com/bioinformatics/article-abstract/33/9/1387/2908431/The-genetic-map-comparator-a-user-friendly?redirectedFrom=fulltext">Paper</a>
+                     </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></center>
+
+
+
+
+
 <!-- ======================================================================= -->
 
 
@@ -1131,6 +1348,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+    <script src="js/portfolio.js"></script>
 
     <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
