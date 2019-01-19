@@ -455,12 +455,12 @@
           </div>
 
           <div class="col-md-3 col-sm-6 portfolio-item show column dataviz mining">
-            <a class="portfolio-link" target="_blank" href="https://www.data-to-viz.com/story/AdjacencyMatrix.html">
+            <a class="portfolio-link" data-toggle="modal" href="#authorRelation">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <p>Co-authorship network</p>
                   <hr>
-                  <p class="explanation_portfolio">Visualize how all the co-authors of my previous supervisor are inter connected.<br><br><i>Coming soon</i></p>
+                  <p class="explanation_portfolio">Visualize how all the co-authors of my previous supervisor are inter connected.<br></p>
                 </div>
               </div>
               <img class="img-fluid" src="img/portfolio/Network_Coauthor.png" alt="">
@@ -482,7 +482,7 @@
 
 
           <div class="col-md-3 col-sm-6 portfolio-item show column dashboard shiny mining">
-            <a class="portfolio-link" target="_blank" href="https://github.com/holtzy/GreenTech-Challenge/blob/master/README.md">
+            <a class="portfolio-link" data-toggle="modal" href="#greenTech">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <p>GreenTech Challenge</p>
@@ -496,7 +496,7 @@
 
 
           <div class="col-md-3 col-sm-6 portfolio-item show column paper dashboard shiny">
-            <a class="portfolio-link"  target="_blank" href="https://github.com/holtzy/Unics/blob/master/README.md">
+            <a class="portfolio-link" data-toggle="modal" href="#unics">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <p>UNICS</p>
@@ -1352,6 +1352,118 @@
                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/holtzy/the-NB-COMO-Project">Github</a>
                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2720421">Paper</a>
                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></center>
+
+
+
+    <!-- Researcher Network-->
+    <center><div class="portfolio-modal modal fade" id="authorRelation" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/Network_Coauthor.png" width="180px"></img>
+                  <h4>Exploring co-author relationships</h4>
+                  <p style="max-width: 600px"></p>
+                  <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://holtzyan.shinyapps.io/the-nb-como-project/">Online app</a>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>Google Scholar is a service that provides any researchers list of publication. I made a script that harvest this information on the web using <code>R</code>. It then take the list of all co-authors and check for each pair if they have published a paper together.</p>
+                    <p>The network information is then visualized using <a href="">static graphs</a> with R, and also using <a href="">interactive version</a> thanks to d3.js</p>
+                    <center><img src="img/portfolio/como-sankey.png" width="80%"></img></center>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>Data mining part of the pipeline is available on <a href="">github</a>. Visualizations are used as example in my other projects: static charts in <a href="">data to viz</a>, interactive ones in the <a href="">d3 graph gallery</a>.</span>
+                    <br><br><br>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></center>
+
+    <!-- Greentech-->
+    <center><div class="portfolio-modal modal fade" id="greenTech" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/GreenTech.png" width="180px"></img>
+                  <h4>The Greentech challenge</h4>
+                  <p style="max-width: 600px">Studying water pollution for the French Ministery of environment.</p>
+                  <p style="max-width: 600px"><i>Third price for this dataviz competition.</i></p>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>The GreenTech challenge is a Dataviz competition launched by the French Ministery of environment that took place in 2017. A huge dataset concerning pesticides in France has been released, and the goal was to build innovative visualizations to sensibilize and inform citizen concerning the french situation over the past 6 Years.</p>
+                    <p>We decided to make a team of 4 friends and built a <code>ShinyApp</code> that allows to efficiently explore this dataset. The app is composed by several sheets, each targeting a specific theme. This tool should allow you to understand what happens in your neighbourhood and in the entire country. It is also studied to improve your genereal knowledge concerning pesticides.</p>
+                    <center><img src="img/portfolio/GreenTech-screen.png" width="80%"></img></center>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>See the associated <a href="https://github.com/holtzy/GreenTech-Challenge/blob/master/README.md">github repository</a> for more information and source code of the project.</span>
+                    <br><br><br>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></center>
+
+
+
+
+    <!-- UNICS -->
+    <center><div class="portfolio-modal modal fade" id="unics" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/Unics_logo.png" width="180px"></img>
+                  <p style="max-width: 600px">Online tool to estimate standard error of allele frequency in pool-sequencing experiments.</p>
+                  <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="http://www.agap-sunshine.inra.fr/unics/">Online app</a>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>UNICS is a <a href="http://www.agap-sunshine.inra.fr/unics/">web app</a> that helps you computing the standard error of allele frequency estimations of future pool-sequencing experiments based on different parameters. You can use it trough the <a href="http://www.agap-sunshine.inra.fr/unics/">online version</a> and read the <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12723">related publication</a>.</p>
+                    <p>Application looks like this:</p>
+                    <center><img src="img/portfolio/unics_screen.png" width="80%"></img></center>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>See the associated <a href="https://github.com/holtzy/Unics">github repository</a> for more information and source code of the project.</span>
+                    <br><br><br>
                   </div>
               </div>
             </div>
