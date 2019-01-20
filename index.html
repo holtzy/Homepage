@@ -162,7 +162,7 @@
       <div class="col-lg-8 text-center text-md-left">
         <p>Hi, I'm Yan!</p>
         <p>My job consists to help companies and researchers to analyse their datasets. I am skilled for most of the data-science steps: data pre-processing, application of statistical methods, data visualization and results communication.</p>
-        <p>I am currently working for the Queensland Brain Institute in Australia, where I develop data visualisation methods at the border between epidemiology and genetics.</p>
+        <p>After having worked for famous research institutes like the <a href=""></a>University of Queensland and private companies like Terres Inovia, I'm now a freelancer available for hire.</p>
         <a class="btn btn-secondary btn-l text-uppercase" href="https://github.com/holtzy/Publication">Publications</a>
         <a class="btn btn-secondary btn-l text-uppercase" href="https://github.com/holtzy/Talk">Talks</a>
         <a class="btn btn-secondary btn-l text-uppercase" href="https://twitter.com/R_Graph_Gallery">Twitter</a>
@@ -524,7 +524,7 @@
 
 
           <div class="col-md-3 col-sm-6 portfolio-item show column mining">
-            <a class="portfolio-link"  target="_blank" href="https://www.data-to-viz.com/story/MapConnection.html">
+            <a class="portfolio-link" data-toggle="modal" href="#surfers">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <p>Where Surfers travel</p>
@@ -1385,7 +1385,7 @@
                     <hr>
                     <p>Google Scholar is a service that provides any researchers list of publication. I made a script that harvest this information on the web using <code>R</code>. It then take the list of all co-authors and check for each pair if they have published a paper together.</p>
                     <p>The network information is then visualized using <a href="">static graphs</a> with R, and also using <a href="">interactive version</a> thanks to d3.js</p>
-                    <center><img src="img/portfolio/como-sankey.png" width="80%"></img></center>
+                    <a href="https://www.data-to-viz.com/graph/arc.html"><center><img src="img/portfolio/researchNet.png" width="80%"></img></center></a>
                     <h6>Read more</h6>
                     <hr>
                     <span>Data mining part of the pipeline is available on <a href="">github</a>. Visualizations are used as example in my other projects: static charts in <a href="">data to viz</a>, interactive ones in the <a href="">d3 graph gallery</a>.</span>
@@ -1463,6 +1463,42 @@
                     <h6>Read more</h6>
                     <hr>
                     <span>See the associated <a href="https://github.com/holtzy/Unics">github repository</a> for more information and source code of the project.</span>
+                    <br><br><br>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></center>
+
+
+    <!-- SURFERS TRAVEL -->
+    <center><div class="portfolio-modal modal fade" id="surfers" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/Surf.png" width="180px"></img>
+                  <h4>The <a href="https://twitter.com/search?f=tweets&vertical=default&q=%23surf&src=typd">#surf</a> project.</h4>
+                  <p style="max-width: 600px">I recovered tweets containing <a href="https://twitter.com/search?f=tweets&vertical=default&q=%23surf&src=typd">#surf</a> for 9 months. Here is where surfers travel.</p>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>I created an <code>R</code> script that recovers all tweets containing the hashtags <code>#surf</code> and run it on a webserver for about 9 months. I recovered more than 400k tweets. Some of them being geolocalized for both home and current location, it is possible to deduce where surfers travel.</p>
+                    <p>Here is an overview of the result:</p>
+                    <a href="https://www.data-to-viz.com/story/MapConnection.html"><center><img src="img/portfolio/surf_travel.png" width="80%"></img></center></a>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>See the dedicated page in <a href="https://www.data-to-viz.com/story/MapConnection.html">data-to-viz.com</a> that tells more about this project, with explanation on how to build a <a href="https://www.data-to-viz.com/story/MapConnection.html">connection map</a>.</span>
                     <br><br><br>
                   </div>
               </div>
