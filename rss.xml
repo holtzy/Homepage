@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+     <title>Yan Holtz's Blog</title>
+     <description>Yan Holtz's blog on data analytics and data visualization.</description>
+     <link>https://www.yan-holtz.com/blog</link>
+
+
+
+
+     <!-- BLOG: DATA TO VIZ -->
+     <item>
+       <title>From Data to Viz - A classification of graphics based on input data format</title>
+       <link>file:///Users/yan/Desktop/Homepage/blog/dataToViz.html</link>
+       <guid>file:///Users/yan/Desktop/Homepage/blog/dataToViz.html</guid>
+       <pubDate>July 2018 00:00:00 MST</pubDate>
+     </item>
+
+
+
+  </channel>
+
+</rss>
