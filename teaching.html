@@ -88,7 +88,8 @@
 
 <header class="masthead">
   <div style="margin-top: 10%">
-    <p style="font-size: 35px">TEACHING MATERIAL</p>
+    <p style="font-size: 35px">Teaching material:</p>
+    <p style="font-size: 35px">Data analytics and visualization</p>
       <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
       <br>
       <ul class="list-inline social-buttons">
@@ -109,16 +110,10 @@
         </li>
       </ul>
       <br><br>
-      <p>This page provides the materials for my lectures and practicals on <u>data analytics</u> and <u>data visualization</u>.</p>
+      <center><p style="max-width: 700px">I love sharing my passion for <u>data analytics</u> and <u>data visualization</u>. If you're interested in attending a workshop or want to organize one for your team, please <a class="js-scroll-trigger" href="#contact">contact me</a>.</p></center>
   </div>
 
 </header>
-
-
-
-
-
-
 
 
 
@@ -145,13 +140,21 @@
 }
 
 .myCard{
-  padding: 10px;
-  margin-bottom: 20px;
-}
-.myCard:hover{
-  border: solid black;
+  min-height: 100%;
+  border: solid #808080;
   border-width: 1px;
   border-radius: 10px;
+  padding: 20px;
+  margin: 0px;
+}
+.myCard:hover{
+  background-color: #F8F8F8;
+  min-height: 100%;
+  border: solid #808080;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0px;
 }
 </style>
 
@@ -161,81 +164,103 @@
 
     <div class="row">
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><i class="fa fa-bar-chart services-logo"></i></a>
-        <a data-toggle="modal" href="#dataMining"><h4>Intro to dataviz</h4></a>
-        <p>What is data visualization? Why is it useful? What are exploratory and explanatory analysis? How to pick the right chart?</p>
-        <p>Lecture | 1h30 | <a href="img/teaching_material/Talk_YanHoltz_QBI_August2018.pdf">Slides</a></p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><i class="fa fa-bar-chart services-logo"></i></a>
+          <a data-toggle="modal" href="#dataMining"><h4>Intro to dataviz</h4></a>
+          <p>What is data visualization? Why is it useful? What are exploratory and explanatory analysis? How to pick the right chart?</p>
+          <p>Lecture | 1h30 | <a class="isDisabled" target="_blank" href="PDF/Intro_Dataviz.pdf">Slides</a></p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><img src="img/all/Bad150.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
-        <a data-toggle="modal" href="#dataMining"><h4>About bad charts</h4></a>
-        <p>This lecture showcases about 30 charts that illustrate the most common dataviz bad practices, and discuss workarounds.</p>
-        <p>Lecture | 1h | <a href="">Slides</a></p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><img src="img/all/Bad150.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
+          <a data-toggle="modal" href="#dataMining"><h4>About bad charts</h4></a>
+          <p>This lecture showcases about 30 charts that illustrate the most common dataviz bad practices, and discuss workarounds.</p>
+          <p>Lecture | 1h | <a class="isDisabled" target="_blank" href="PDF/Dataviz_Caveats.pdf">Slides</a></p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><img src="img/all/Rlogo.jpg" width="29%" style="margin-bottom: 31px; margin-top: 31px"></img></a>
-        <a data-toggle="modal" href="#dataMining"><h4>Intro to R</h4></a>
-        <p>Learn the basics of <code>R</code> and the <code>tidyversex</code>. Loading a file, basic data manipulation, simple stat model and a first chart.</p>
-        <p><a href="">Lecture</a> & <a href="">practical</a> | 4h</p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><img src="img/all/Rlogo.jpg" width="29%" style="margin-bottom: 31px; margin-top: 31px"></img></a>
+          <a data-toggle="modal" href="#dataMining"><h4>Intro to R</h4></a>
+          <p>Learn the basics of <code>R</code> and the <code>tidyversex</code>. Loading a file, basic data manipulation, simple stat model and a first chart.</p>
+          <p><a class="isDisabled" target="_blank" href="">Lecture</a> & <a class="isDisabled" target="_blank" href="">practical</a> | 4h</p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><img src="img/all/ggplot.jpg" width="29%" style="margin-bottom: 12px; margin-top: 12px"></img></a>
-        <a data-toggle="modal" href="#dataMining"><h4>The very basics of ggplot2</h4></a>
-        <p>Build basic charts with <code>ggplot2</code>, the most powerful tool for dataviz with <code>R</code>. All basic chart types are covered.</p>
-        <p><a href="">Lecture</a> & <a href="">practical</a> | 4h</p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><img src="img/all/ggplot.jpg" width="29%" style="margin-bottom: 12px; margin-top: 12px"></img></a>
+          <a data-toggle="modal" href="#dataMining"><h4>The very basics of ggplot2</h4></a>
+          <p>Build basic charts with <code>ggplot2</code>, the most powerful tool for dataviz with <code>R</code>. All basic chart types are covered.</p>
+          <p><a class="isDisabled" target="_blank" href="">Lecture</a> & <a class="isDisabled" target="_blank" href="PDF/Ggplot2_basic.pdf">practical</a> | 4h</p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><img src="img/all/ggplot.jpg" width="29%" style="margin-bottom: 12px; margin-top: 12px"></img></a>
-        <a data-toggle="modal" href="#dataMining"><h4>Going further with ggplot2</h4></a>
-        <p>Learn the next steps of <code>ggplot2</code>, like annotation, appearance customization, extensions and more.</p>
-        <p><a href="">Lecture</a> & <a href="">practical</a> | 4h</p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><img src="img/all/ggplot.jpg" width="29%" style="margin-bottom: 12px; margin-top: 12px"></img></a>
+          <a data-toggle="modal" href="#dataMining"><h4>Going further with ggplot2</h4></a>
+          <p>Learn the next steps of <code>ggplot2</code>, like annotation, appearance customization, extensions and more.</p>
+          <p><a class="isDisabled" target="_blank" href="">Lecture</a> & <a class="isDisabled" target="_blank" href="PDF/Ggplot2_advanced.pdf">practical</a> | 4h</p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><img src="img/all/Network150.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
-        <a data-toggle="modal" href="#dataMining"><h4>Less common charts</h4></a>
-        <p>Discover charts like Sankey Diagram, Network graphs, Maps, Treemaps and more. Learn how to build them with R.</p>
-        <p><a href="">Lecture</a> & <a href="">practical</a> | 4h</p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><img src="img/all/Network150.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
+          <a data-toggle="modal" href="#dataMining"><h4>Less common charts</h4></a>
+          <p>Discover charts like Sankey Diagram, Network graphs, Maps, Treemaps and more. Learn how to build them with R.</p>
+          <p><a class="isDisabled" target="_blank" href="">Lecture</a> & <a class="isDisabled" target="_blank" href="">practical</a> | 4h</p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><img src="img/all/RMD.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
-        <a data-toggle="modal" href="#dataMining"><h4>Reporting with R Markdown</h4></a>
-        <p>Build interactive and reproducible reports directly from your R code thanks to R Markdown.</p>
-        <p>Practical | 2h | <a href="">Slides</a></p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><img src="img/all/RMD.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
+          <a data-toggle="modal" href="#dataMining"><h4>Reporting with R Markdown</h4></a>
+          <p>Build interactive and reproducible reports directly from your R code thanks to R Markdown.</p>
+          <p>Practical | 2h | <a target="_blank" href="PDF/Intro_RMarkDown.pdf">Slides</a></p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><img src="img/all/github.png" width="33%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
-        <a data-toggle="modal" href="#dataMining"><h4>Intro to github</h4></a>
-        <p>Share your report online thanks to github, and learn the basics of version control and code sharing.</p>
-        <p>Practical | 2h | <a href="">Slides</a></p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><img src="img/all/github.png" width="33%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
+          <a data-toggle="modal" href="#dataMining"><h4>Intro to github</h4></a>
+          <p>Share your report online thanks to github, and learn the basics of version control and code sharing.</p>
+          <p>Practical | 2h | <a class="isDisabled" target="_blank" href="">Slides</a></p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><img src="img/all/dplyr.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
-        <a data-toggle="modal" href="#dataMining"><h4>Data manipulation in R</h4></a>
-        <p><code>Tidyr</code> and <code>Dplyr</code> are 2 packages from the <code>tidyverse</code> allowing to efficiently manipulate your data.</p>
-        <p>Practical | 4h | <a href="">Slides</a></p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><img src="img/all/dplyr.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
+          <a data-toggle="modal" href="#dataMining"><h4>Data manipulation in R</h4></a>
+          <p><code>Tidyr</code> and <code>Dplyr</code> are 2 packages from the <code>tidyverse</code> allowing to efficiently manipulate your data.</p>
+          <p>Practical | 4h | <a class="isDisabled" target="_blank" href="">Slides</a></p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><i class="fa fa-globe services-logo"></i></a>
-        <a data-toggle="modal" href="#dataMining"><h4>Building maps with R</h4></a>
-        <p>How to represent geospatial information with static or interactive maps with R. Introduces packages like <code>sf</code> and <code>leaflet</code>. </p>
-        <p>Practical | 4h | <a href="">Slides</a></p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><i class="fa fa-globe services-logo"></i></a>
+          <a data-toggle="modal" href="#dataMining"><h4>Building maps with R</h4></a>
+          <p>How to represent geospatial information with static or interactive maps with R. Introduces packages like <code>sf</code> and <code>leaflet</code>. </p>
+          <p>Practical | 4h | <a class="isDisabled" target="_blank" href="">Slides</a></p>
+        </div>
       </div>
 
-      <div class="col-lg-4 text-center myCard">
-        <a data-toggle="modal" href="#dataMining"><img src="img/all/Interactive150.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
-        <a data-toggle="modal" href="#dataMining"><h4>Interactive charts</h4></a>
-        <p>The <code>Html Widgets</code> are a set of R packages allowing to build interactive charts. Allows to zoom in, add tooltip on hover and more.</p>
-        <p>Practical | 4h | <a href="">Slides</a></p>
+      <div class="col-lg-4 col-md-6 text-center" style="margin-bottom: 20px">
+        <div class="myCard">
+          <a data-toggle="modal" href="#dataMining"><img src="img/all/Interactive150.png" width="29%" style="margin-bottom: 21px; margin-top: 21px"></img></a>
+          <a data-toggle="modal" href="#dataMining"><h4>Interactive charts</h4></a>
+          <p>The <code>Html Widgets</code> are a set of R packages allowing to build interactive charts. Allows to zoom in, add tooltip on hover and more.</p>
+          <p>Practical | 4h | <a class="isDisabled" target="_blank" href="">Slides</a></p>
+        </div>
       </div>
 
     </div>
