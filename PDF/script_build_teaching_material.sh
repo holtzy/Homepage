@@ -23,3 +23,6 @@ wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_advanced.pdf"
 
 # R Markdown
 wget "https://github.com/holtzy/Teaching/raw/master/Intro_RMarkDown.pdf"
+
+# Github
+wget "https://github.com/holtzy/Teaching/raw/master/Intro_Github.pdf"
