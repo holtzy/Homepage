@@ -5,9 +5,11 @@
 # Basically just a set of wget to downlad the PDFs
 
 # intro dataviz
+rm Intro_Dataviz.pdf
 wget "https://github.com/holtzy/Teaching/raw/master/Intro_Dataviz.pdf"
 
 # dataviz caveats
+rm Dataviz_Caveats.pdf
 wget "https://github.com/holtzy/Teaching/raw/master/Dataviz_Caveats.pdf"
 
 # intro to R
