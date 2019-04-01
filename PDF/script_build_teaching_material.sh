@@ -21,7 +21,10 @@ wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_basicTP_correction.h
 wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_basicTP.html"
 
 # GGPLOT2 advanced
+rm Ggplot2_advanced.pdf Ggplot2_advancedTP_correction.html Ggplot2_advancedTP.html
 wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_advanced.pdf"
+wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_advancedTP_correction.html"
+wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_advancedTP.html"
 
 # R Markdown
 wget "https://github.com/holtzy/Teaching/raw/master/Intro_RMarkDown.pdf"
