@@ -16,6 +16,7 @@ wget "https://github.com/holtzy/Teaching/raw/master/Dataviz_Caveats.pdf"
 
 
 # intro GGPLOT2
+rm Ggplot2_basic.pdf Ggplot2_basicTP_correction.html Ggplot2_basicTP.html
 wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_basic.pdf"
 wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_basicTP_correction.html"
 wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_basicTP.html"
