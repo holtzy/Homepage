@@ -22,8 +22,7 @@ wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_basicTP_correction.h
 wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_basicTP.html"
 
 # GGPLOT2 advanced
-rm Ggplot2_advanced.pdf Ggplot2_advancedTP_correction.html Ggplot2_advancedTP.html
-wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_advanced.pdf"
+rm Ggplot2_advancedTP_correction.html Ggplot2_advancedTP.html
 wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_advancedTP_correction.html"
 wget "https://github.com/holtzy/Teaching/raw/master/Ggplot2_advancedTP.html"
 
