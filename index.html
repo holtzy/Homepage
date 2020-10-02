@@ -45,6 +45,14 @@
   <!-- Custom styles for this template -->
   <link href="css/agency.css" rel="stylesheet">
 
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
 </head>
 
 <body id="page-top">
@@ -823,7 +831,6 @@
 
 
 
-
   <!-- ======================== MAP SECTION ============================ -->
 
   <style>
@@ -837,264 +844,69 @@
       opacity: 1
     }
   </style>
-  </head>
+  <!-- center: { lat: 43.61092, lng: 3.87723 } -->
 
-  <body>
-    <!--The div element for the map -->
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        // Styles a map in night mode.
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: { lat: 43.61092, lng: 3.87723 },
-          styles: [
-            {
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#1d2c4d"
-                }
-              ]
-            },
-            {
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#8ec3b9"
-                }
-              ]
-            },
-            {
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "color": "#1a3646"
-                }
-              ]
-            },
-            {
-              "featureType": "administrative.country",
-              "elementType": "geometry.stroke",
-              "stylers": [
-                {
-                  "color": "#4b6878"
-                }
-              ]
-            },
-            {
-              "featureType": "administrative.land_parcel",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#64779e"
-                }
-              ]
-            },
-            {
-              "featureType": "administrative.province",
-              "elementType": "geometry.stroke",
-              "stylers": [
-                {
-                  "color": "#4b6878"
-                }
-              ]
-            },
-            {
-              "featureType": "landscape.man_made",
-              "elementType": "geometry.stroke",
-              "stylers": [
-                {
-                  "color": "#334e87"
-                }
-              ]
-            },
-            {
-              "featureType": "landscape.natural",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#023e58"
-                }
-              ]
-            },
-            {
-              "featureType": "poi",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#283d6a"
-                }
-              ]
-            },
-            {
-              "featureType": "poi",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#6f9ba5"
-                }
-              ]
-            },
-            {
-              "featureType": "poi",
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "color": "#1d2c4d"
-                }
-              ]
-            },
-            {
-              "featureType": "poi.park",
-              "elementType": "geometry.fill",
-              "stylers": [
-                {
-                  "color": "#023e58"
-                }
-              ]
-            },
-            {
-              "featureType": "poi.park",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#3C7680"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#304a7d"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#98a5be"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "color": "#1d2c4d"
-                }
-              ]
-            },
-            {
-              "featureType": "road.highway",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#2c6675"
-                }
-              ]
-            },
-            {
-              "featureType": "road.highway",
-              "elementType": "geometry.stroke",
-              "stylers": [
-                {
-                  "color": "#255763"
-                }
-              ]
-            },
-            {
-              "featureType": "road.highway",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#b0d5ce"
-                }
-              ]
-            },
-            {
-              "featureType": "road.highway",
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "color": "#023e58"
-                }
-              ]
-            },
-            {
-              "featureType": "transit",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#98a5be"
-                }
-              ]
-            },
-            {
-              "featureType": "transit",
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "color": "#1d2c4d"
-                }
-              ]
-            },
-            {
-              "featureType": "transit.line",
-              "elementType": "geometry.fill",
-              "stylers": [
-                {
-                  "color": "#283d6a"
-                }
-              ]
-            },
-            {
-              "featureType": "transit.station",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#3a4762"
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#0e1626"
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "color": "#4e6d70"
-                }
-              ]
-            }
-          ]
-        });
-        var contentString = '<div id="content" style="font-size: 14px; line-height: 20px">Montpellier, France<br><a href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a></div>'
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-        var marker = new google.maps.Marker({ position: { lat: 43.61092, lng: 3.52 }, map: map })
-        marker.addListener('click', function () {
-          infowindow.open(map, marker);
-        });
-      }
-    </script>
-    <script defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_kzNNt4JEY65J_AemApd7Q8TwaUqHENY&callback=initMap">
-      </script>
+  <!--The div element for the map -->
+  <div id="map"></div>
+  <script>
+    var mymap = L.map('map').setView([43.61092, 3.87723], 3);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoiaG9sdHp5YW4iLCJhIjoiY2tmczBrd3BrMGJodDJ0bXQ5aW9sZXJ6eCJ9.8zTEkfZ54u4TvDGNjNh-Cg'
+    }).addTo(mymap);
+    var marker = L.marker([43.61092, 3.87723]).addTo(mymap);
+  </script>
+
+
+
+
+
+
+  <!-- ======================= FOOTER SECTION ================================ -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; Holtz Yan 2018</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/R_Graph_Gallery">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/holtzy">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/yan-holtz-2477534a/">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
 
 
 
@@ -1103,118 +915,257 @@
 
 
 
-    <!-- ======================= FOOTER SECTION ================================ -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Holtz Yan 2018</span>
+
+
+
+
+
+  <!-- =================== MODAL SECTION ===================================== -->
+
+
+  <!-- Data management -->
+  <center>
+    <div class="portfolio-modal modal fade" id="dataManagement" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
           </div>
-          <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="https://twitter.com/R_Graph_Gallery">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://github.com/holtzy">
-                  <i class="fa fa-github"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/yan-holtz-2477534a/">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-            </ul>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <i class="fa fa-wrench services-logo"></i>
+                  <h4>Data Management</h4>
+                  <p style="max-width: 600px">A data project always start with a data enginering step. You need to
+                    harvest data and store it in an adequate format to be able to use it.</p>
+                  <div style="text-align: left">
+                    <h6>I can help you to..</h6>
+                    <hr>
+                    <ul>
+                      <li><u>Harvest</u> data from different sources like <code>APIs</code>, <code>SQL</code>
+                        databases or messy <code>Excel</code> spreadsheets.</li>
+                      <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
+                      <li><u>Clean</u> datasets removing outliers and abberant data.</li>
+                      <li>Create reproducible data preparation <u>workflows</u></li>
+                      <li><u>Automatize</u> the creation of data related reports</li>
+                    </ul>
+                    <br>
+                    <h6>Example:</h6>
+                    <hr>
+                    <ul>
+                      <li>I collected tweets containing the <code>#surf</code> for 9 months to study how surfers use
+                        social media. I used the <code>twitter API</code> and made the data collection automatic
+                        thanks to a personnal <code>webserver</code> and a custom <code>R script</code>.</li>
+                      <li>I created a <code>dashboard</code> for a company called Terres Inovia. It is directly
+                        plugged on their <code>SQL database</code> and allows to access its information in real time.
+                      </li>
+                    </ul>
+                    <br>
+                    <h6>Contact me</h6>
+                    <hr>
+                    <span>Tell me more about your project at <a
+                        href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work
+                      together.</span>
+                    <div style="margin-top: 15px;">
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://github.com/holtzy/data_to_viz">Github</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://twitter.com/R_Graph_Gallery">Twitter</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="mailto:yan.holtz.data@gmail.com">Mail</a>
+                    </div>
+                    <br><br><br>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
-
-    <!-- ======================================================================= -->
+  </center>
 
 
-
-
-
-
-
-
-
-
-
-
-
-    <!-- =================== MODAL SECTION ===================================== -->
-
-
-    <!-- Data management -->
-    <center>
-      <div class="portfolio-modal modal fade" id="dataManagement" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
+  <!-- Data mining -->
+  <center>
+    <div class="portfolio-modal modal fade" id="dataMining" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <i class="fa fa-search services-logo"></i>
+                  <h4>Data Mining</h4>
+                  <p style="max-width: 600px">Crunch the data to get answer to your question. Give insight to the
+                    information.</p>
+                  <div style="text-align: left">
+                    <h6>I can help you for</h6>
+                    <hr>
+                    <ul>
+                      <li><u>Exploratory analysis</u> of a dataset.</li>
+                      <li>Creation of clean and reproducible <u>reports</u> using <code>R Markdown</code>.</li>
+                      <li>Application of <u>statistical methods</u> on your dataset.</li>
+                      <li>Creation of <u>custom scripts</u> for analysing your data automatically</li>
+                    </ul>
+                    <br>
+                    <h6>Example:</h6>
+                    <hr>
+                    <ul>
+                      <li>I'm the author of several <a href="https://github.com/holtzy/Publication">scientific
+                          publications</a> where I was in charge to explore and understand complex dataset in order to
+                        answer scientific questions.</li>
+                      <li>I recovered information about crypto currency prices on different exchanges and explored the
+                        data looking for <a target="_blank" href="https://holtzy.github.io/Crypto-Arbitrage/">arbitrage
+                          opportunities</a>.</li>
+                    </ul>
+                    <br>
+                    <h6>Contact me</h6>
+                    <hr>
+                    <span>Tell me more about your project at <a
+                        href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work
+                      together.</span>
+                    <div style="margin-top: 15px;">
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://github.com/holtzy/data_to_viz">Github</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://twitter.com/R_Graph_Gallery">Twitter</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="mailto:yan.holtz.data@gmail.com">Mail</a>
+                    </div>
+                    <br><br><br>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <i class="fa fa-wrench services-logo"></i>
-                    <h4>Data Management</h4>
-                    <p style="max-width: 600px">A data project always start with a data enginering step. You need to
-                      harvest data and store it in an adequate format to be able to use it.</p>
-                    <div style="text-align: left">
-                      <h6>I can help you to..</h6>
-                      <hr>
-                      <ul>
-                        <li><u>Harvest</u> data from different sources like <code>APIs</code>, <code>SQL</code>
-                          databases or messy <code>Excel</code> spreadsheets.</li>
-                        <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
-                        <li><u>Clean</u> datasets removing outliers and abberant data.</li>
-                        <li>Create reproducible data preparation <u>workflows</u></li>
-                        <li><u>Automatize</u> the creation of data related reports</li>
-                      </ul>
-                      <br>
-                      <h6>Example:</h6>
-                      <hr>
-                      <ul>
-                        <li>I collected tweets containing the <code>#surf</code> for 9 months to study how surfers use
-                          social media. I used the <code>twitter API</code> and made the data collection automatic
-                          thanks to a personnal <code>webserver</code> and a custom <code>R script</code>.</li>
-                        <li>I created a <code>dashboard</code> for a company called Terres Inovia. It is directly
-                          plugged on their <code>SQL database</code> and allows to access its information in real time.
-                        </li>
-                      </ul>
-                      <br>
-                      <h6>Contact me</h6>
-                      <hr>
-                      <span>Tell me more about your project at <a
-                          href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work
-                        together.</span>
-                      <div style="margin-top: 15px;">
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://github.com/holtzy/data_to_viz">Github</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://twitter.com/R_Graph_Gallery">Twitter</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="mailto:yan.holtz.data@gmail.com">Mail</a>
-                      </div>
-                      <br><br><br>
+          </div>
+        </div>
+      </div>
+  </center>
+
+
+
+  <!-- Data viz -->
+  <center>
+    <div class="portfolio-modal modal fade" id="dataViz" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <i class="fa fa-bar-chart services-logo"></i>
+                  <h4>Data Visualization</h4>
+                  <p style="max-width: 600px">I'm a recognized expert in the field of dataviz. I've created several <a
+                      href="#website" target="_blank">websites</a> and given <a target="_blank"
+                      href="https://github.com/holtzy/Talk">talks</a> on this topic.</p>
+                  <div style="text-align: left">
+                    <h6>I can help you with:</h6>
+                    <hr>
+                    <ul>
+                      <li>Creation and review of graphs for <u>scientific publication</u>.</li>
+                      <li>Development of <u>data application</u> using <code>R</code> and <code>Shiny</code>.</li>
+                      <li>Creation of custom <u>data visualization for the web</u> using <code>d3.js</code>.</li>
+                      <li><u>Dashboard</u> creation for real time data analysis.</li>
+                      <li>Visualization of <u>geospatial</u> data.</li>
+                    </ul>
+                    <br>
+                    <h6>Example:</h6>
+                    <hr>
+                    <ul>
+                      <li>A <a href="https://holtzyan.shinyapps.io/the-nb-como-project/">website</a> describing
+                        research results on mental disorders comorbidity.</li>
+                      <li><a href="https://www.data-to-viz.com">Data to viz</a>: a decision tree leading to the most
+                        appropriate chart type for your data.</li>
+                      <li>See many more examples in the <a href="#portofolio" target="_blank">portfolio</a> section of
+                        this website.</li>
+                    </ul>
+                    <br>
+                    <h6>Contact me</h6>
+                    <hr>
+                    <span>Tell me more about your project at <a
+                        href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work
+                      together.</span>
+                    <div style="margin-top: 15px;">
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://github.com/holtzy/data_to_viz">Github</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://twitter.com/R_Graph_Gallery">Twitter</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="mailto:yan.holtz.data@gmail.com">Mail</a>
+                    </div>
+                    <br><br><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </center>
+
+  <!-- UKB geo application -->
+  <center>
+    <div class="portfolio-modal modal fade" id="ukbGeoApp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/UKB_geo.png" width="180px"></img>
+                  <h4>Geographical distribution of genetic traits.</h4>
+                  <p style="max-width: 600px">A web application allowing to visualize the geographical distribution of
+                    ~200 genetic related traits in the UK.</p>
+                  <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                    href="https://holtzyan.shinyapps.io/UKB_geo/">Online app</a>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>A group of researcher from the <a href="https://imb.uq.edu.au">Institute of Molecular
+                        Bioscience</a> investigated the geographic clustering of genetic variants that influence
+                      complex traits and disease risk in a sample of ~450,000 individuals from Great Britain.</p>
+                    <p>I built a web application that goes in support of the paper intitled <a
+                        href="https://www.biorxiv.org/content/early/2018/10/30/457515">Genetic Consequences of Social
+                        Stratification in Great Britain</a>.</p>
+                    <img src="img/portfolio/ukbGeoDemo.png" width="100%"></img>
+                    <p>The <a href="https://holtzyan.shinyapps.io/UKB_geo/">shiny application</a> allows to visualize
+                      the geographic distribution of any trait. It allows to custom color scales, region shape and to
+                      apply a <a href="https://www.data-to-viz.com/graph/cartogram.html">cartogram</a> algorithm to
+                      the map. Moreover, the tool allows one to upload its <u>own data</u> to benefit this dataviz
+                      tool.</p>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>The web application is available <a href="https://holtzyan.shinyapps.io/UKB_geo/">online</a>.
+                      You can read the scientific paper on
+                      <a href="https://www.biorxiv.org/content/early/2018/10/30/457515">BioArXiv</a>. The source code
+                      of the project are of course on <a
+                        href="https://github.com/holtzy/UKB_geo_application">Github</a>.</span>
+                    <div style="margin-top: 5px;">
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://holtzyan.shinyapps.io/UKB_geo/">Online app</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://github.com/holtzy/UKB_geo_application">Github</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://www.biorxiv.org/content/early/2018/10/30/457515">Paper</a>
                     </div>
                   </div>
                 </div>
@@ -1222,62 +1173,56 @@
             </div>
           </div>
         </div>
-    </center>
+      </div>
+  </center>
 
 
-    <!-- Data mining -->
-    <center>
-      <div class="portfolio-modal modal fade" id="dataMining" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
+
+  <!-- Genetic Map Comparator -->
+  <center>
+    <div class="portfolio-modal modal fade" id="genMapComp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <i class="fa fa-search services-logo"></i>
-                    <h4>Data Mining</h4>
-                    <p style="max-width: 600px">Crunch the data to get answer to your question. Give insight to the
-                      information.</p>
-                    <div style="text-align: left">
-                      <h6>I can help you for</h6>
-                      <hr>
-                      <ul>
-                        <li><u>Exploratory analysis</u> of a dataset.</li>
-                        <li>Creation of clean and reproducible <u>reports</u> using <code>R Markdown</code>.</li>
-                        <li>Application of <u>statistical methods</u> on your dataset.</li>
-                        <li>Creation of <u>custom scripts</u> for analysing your data automatically</li>
-                      </ul>
-                      <br>
-                      <h6>Example:</h6>
-                      <hr>
-                      <ul>
-                        <li>I'm the author of several <a href="https://github.com/holtzy/Publication">scientific
-                            publications</a> where I was in charge to explore and understand complex dataset in order to
-                          answer scientific questions.</li>
-                        <li>I recovered information about crypto currency prices on different exchanges and explored the
-                          data looking for <a target="_blank"
-                            href="https://holtzy.github.io/Crypto-Arbitrage/">arbitrage opportunities</a>.</li>
-                      </ul>
-                      <br>
-                      <h6>Contact me</h6>
-                      <hr>
-                      <span>Tell me more about your project at <a
-                          href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work
-                        together.</span>
-                      <div style="margin-top: 15px;">
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://github.com/holtzy/data_to_viz">Github</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://twitter.com/R_Graph_Gallery">Twitter</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="mailto:yan.holtz.data@gmail.com">Mail</a>
-                      </div>
-                      <br><br><br>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/GenMapComp.png" width="180px"></img>
+                  <h4>The Genetic Map Comparator.</h4>
+                  <p style="max-width: 600px">A web application made to compare genetic maps.</p>
+                  <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                    href="http://www.agap-sunshine.inra.fr/genmapcomp/">Online app</a>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>Building and comparing genetic maps between several populations is a common task for
+                      geneticists.</p>
+                    <p>We've created an <a href="http://www.agap-sunshine.inra.fr/genmapcomp/">online tool</a>
+                      allowing to upload your maps and characterize and visualize them. Several interactive graphs are
+                      available with export options and more. The tool was created using <code>R</code> and
+                      <code>Shiny</code>, plus several <code>Html widgets</code> for interactivity.</p>
+                    <center><img src="img/portfolio/genmapcomp.jpg" width="80%"></img></center>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>The web application is available <a
+                        href="http://www.agap-sunshine.inra.fr/genmapcomp/">online</a>. You can read the scientific
+                      paper on <a
+                        href="https://academic.oup.com/bioinformatics/article-abstract/33/9/1387/2908431/The-genetic-map-comparator-a-user-friendly?redirectedFrom=fulltext">Bioinformatics</a>.
+                      The source code of the project are on <a
+                        href="https://github.com/holtzy/GenMap-Comparator">Github</a>.</span>
+                    <div style="margin-top: 5px;">
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="http://www.agap-sunshine.inra.fr/genmapcomp/">Online app</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://github.com/holtzy/GenMap-Comparator">Github</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://academic.oup.com/bioinformatics/article-abstract/33/9/1387/2908431/The-genetic-map-comparator-a-user-friendly?redirectedFrom=fulltext">Paper</a>
                     </div>
                   </div>
                 </div>
@@ -1285,65 +1230,61 @@
             </div>
           </div>
         </div>
-    </center>
+      </div>
+  </center>
 
 
-
-    <!-- Data viz -->
-    <center>
-      <div class="portfolio-modal modal fade" id="dataViz" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
+  <!-- Danish como project -->
+  <center>
+    <div class="portfolio-modal modal fade" id="comoProject" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <i class="fa fa-bar-chart services-logo"></i>
-                    <h4>Data Visualization</h4>
-                    <p style="max-width: 600px">I'm a recognized expert in the field of dataviz. I've created several <a
-                        href="#website" target="_blank">websites</a> and given <a target="_blank"
-                        href="https://github.com/holtzy/Talk">talks</a> on this topic.</p>
-                    <div style="text-align: left">
-                      <h6>I can help you with:</h6>
-                      <hr>
-                      <ul>
-                        <li>Creation and review of graphs for <u>scientific publication</u>.</li>
-                        <li>Development of <u>data application</u> using <code>R</code> and <code>Shiny</code>.</li>
-                        <li>Creation of custom <u>data visualization for the web</u> using <code>d3.js</code>.</li>
-                        <li><u>Dashboard</u> creation for real time data analysis.</li>
-                        <li>Visualization of <u>geospatial</u> data.</li>
-                      </ul>
-                      <br>
-                      <h6>Example:</h6>
-                      <hr>
-                      <ul>
-                        <li>A <a href="https://holtzyan.shinyapps.io/the-nb-como-project/">website</a> describing
-                          research results on mental disorders comorbidity.</li>
-                        <li><a href="https://www.data-to-viz.com">Data to viz</a>: a decision tree leading to the most
-                          appropriate chart type for your data.</li>
-                        <li>See many more examples in the <a href="#portofolio" target="_blank">portfolio</a> section of
-                          this website.</li>
-                      </ul>
-                      <br>
-                      <h6>Contact me</h6>
-                      <hr>
-                      <span>Tell me more about your project at <a
-                          href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a> to see if we can work
-                        together.</span>
-                      <div style="margin-top: 15px;">
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://github.com/holtzy/data_to_viz">Github</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://twitter.com/R_Graph_Gallery">Twitter</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="mailto:yan.holtz.data@gmail.com">Mail</a>
-                      </div>
-                      <br><br><br>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/como.png" width="180px"></img>
+                  <h4>Comorbidity Within Mental Disorders</h4>
+                  <p style="max-width: 600px">Visualizing the patterns of comorbidity within treated mental disorders.
+                  </p>
+                  <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                    href="https://holtzyan.shinyapps.io/the-nb-como-project/">Online app</a>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p><u>Comorbidity</u> is defined as the presence of 1 or more disorders in relation to an index
+                      disorder. I've been involved in a project with the <a href="https://qbi.uq.edu.au/">Queensland
+                        Brain Institute</a> (Australia) and the <a
+                        href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiKjZLU9vXfAhWGX30KHXESA4kQFjAAegQIAxAC&url=https%3A%2F%2Finternational.au.dk%2F&usg=AOvVaw3H3o22AmsQ30L_Elw2o_ZG">University
+                        of Aarhus</a> (Denmark) to build an interactive website allowing to explore the discovered
+                      patterns of comorbidity between mental disorders.</p>
+                    <p>The <a href="https://holtzyan.shinyapps.io/the-nb-como-project/">online tool</a> goes with the
+                      publication in <a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2720421">Jama
+                        Psychiatry</a>. Several interactive graphs are available with export options and more. The
+                      tool was created using <code>R</code> and <code>Shiny</code>, plus several
+                      <code>Html widgets</code> for interactivity.</p>
+                    <center><img src="img/portfolio/como-sankey.png" width="80%"></img></center>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>The web application is available <a
+                        href="https://holtzyan.shinyapps.io/the-nb-como-project/">online</a>. You can read the
+                      scientific paper on <a
+                        href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2720421">Bioinformatics</a>.
+                      The source code of the project are on <a
+                        href="https://github.com/holtzy/the-NB-COMO-Project">Github</a>.</span>
+                    <div style="margin-top: 5px;">
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://holtzyan.shinyapps.io/the-nb-como-project/">Online app</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://github.com/holtzy/the-NB-COMO-Project">Github</a>
+                      <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                        href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2720421">Paper</a>
                     </div>
                   </div>
                 </div>
@@ -1351,436 +1292,257 @@
             </div>
           </div>
         </div>
-    </center>
+      </div>
+  </center>
 
-    <!-- UKB geo application -->
-    <center>
-      <div class="portfolio-modal modal fade" id="ukbGeoApp" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
+
+  <!-- Terres Inovia -->
+  <center>
+    <div class="portfolio-modal modal fade" id="terresInovia" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <img src="img/portfolio/UKB_geo.png" width="180px"></img>
-                    <h4>Geographical distribution of genetic traits.</h4>
-                    <p style="max-width: 600px">A web application allowing to visualize the geographical distribution of
-                      ~200 genetic related traits in the UK.</p>
-                    <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                      href="https://holtzyan.shinyapps.io/UKB_geo/">Online app</a>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/TI4.png" width="180px"></img>
+                  <h4>Dashboard for <i>Terres Inovia</i></h4>
+                  <p style="max-width: 600px">Creation of a dashboard to explore the database of a private company.
+                  </p>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p><a href="http://www.terresinovia.fr">Terres Inovia</a> is a French company carrying out applied
+                      research on oilseed plants and protein crop. It phenotypes the main varieties of 20 crop species
+                      in many locations for several traits every year. This information is stored in a massive
+                      <code>SQL</code> database.</p>
+                    <p>I created a <code>dashboard</code> allowing to explore these data. It allows to quickly
+                      understand what variety performs well in what kind of environmental condition. It thus has a
+                      direct impact on advices provided to farmer in France.</p>
+                    <p>The dashboard was created using <code>R</code> and <code>Shiny</code>. It requires several
+                      <code>HTML widgets</code> to create interactive graphs, and specific packages to interact with
+                      the database. Here is a screenshot of the welcome page of the application:</p>
+                    <center><img src="img/portfolio/TI1.png" width="80%"></img></center>
                     <br><br>
-                    <div style="text-align: left">
-                      <h6>Description</h6>
-                      <hr>
-                      <p>A group of researcher from the <a href="https://imb.uq.edu.au">Institute of Molecular
-                          Bioscience</a> investigated the geographic clustering of genetic variants that influence
-                        complex traits and disease risk in a sample of ~450,000 individuals from Great Britain.</p>
-                      <p>I built a web application that goes in support of the paper intitled <a
-                          href="https://www.biorxiv.org/content/early/2018/10/30/457515">Genetic Consequences of Social
-                          Stratification in Great Britain</a>.</p>
-                      <img src="img/portfolio/ukbGeoDemo.png" width="100%"></img>
-                      <p>The <a href="https://holtzyan.shinyapps.io/UKB_geo/">shiny application</a> allows to visualize
-                        the geographic distribution of any trait. It allows to custom color scales, region shape and to
-                        apply a <a href="https://www.data-to-viz.com/graph/cartogram.html">cartogram</a> algorithm to
-                        the map. Moreover, the tool allows one to upload its <u>own data</u> to benefit this dataviz
-                        tool.</p>
-                      <h6>Read more</h6>
-                      <hr>
-                      <span>The web application is available <a
-                          href="https://holtzyan.shinyapps.io/UKB_geo/">online</a>. You can read the scientific paper on
-                        <a href="https://www.biorxiv.org/content/early/2018/10/30/457515">BioArXiv</a>. The source code
-                        of the project are of course on <a
-                          href="https://github.com/holtzy/UKB_geo_application">Github</a>.</span>
-                      <div style="margin-top: 5px;">
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://holtzyan.shinyapps.io/UKB_geo/">Online app</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://github.com/holtzy/UKB_geo_application">Github</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://www.biorxiv.org/content/early/2018/10/30/457515">Paper</a>
-                      </div>
-                    </div>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>I can't provide more information on this project for privacy reasons.</span>
+                    <br><br><br>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </center>
+      </div>
+  </center>
 
 
 
-    <!-- Genetic Map Comparator -->
-    <center>
-      <div class="portfolio-modal modal fade" id="genMapComp" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
+
+
+  <!-- Researcher Network-->
+  <center>
+    <div class="portfolio-modal modal fade" id="authorRelation" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <img src="img/portfolio/GenMapComp.png" width="180px"></img>
-                    <h4>The Genetic Map Comparator.</h4>
-                    <p style="max-width: 600px">A web application made to compare genetic maps.</p>
-                    <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                      href="http://www.agap-sunshine.inra.fr/genmapcomp/">Online app</a>
-                    <br><br>
-                    <div style="text-align: left">
-                      <h6>Description</h6>
-                      <hr>
-                      <p>Building and comparing genetic maps between several populations is a common task for
-                        geneticists.</p>
-                      <p>We've created an <a href="http://www.agap-sunshine.inra.fr/genmapcomp/">online tool</a>
-                        allowing to upload your maps and characterize and visualize them. Several interactive graphs are
-                        available with export options and more. The tool was created using <code>R</code> and
-                        <code>Shiny</code>, plus several <code>Html widgets</code> for interactivity.</p>
-                      <center><img src="img/portfolio/genmapcomp.jpg" width="80%"></img></center>
-                      <h6>Read more</h6>
-                      <hr>
-                      <span>The web application is available <a
-                          href="http://www.agap-sunshine.inra.fr/genmapcomp/">online</a>. You can read the scientific
-                        paper on <a
-                          href="https://academic.oup.com/bioinformatics/article-abstract/33/9/1387/2908431/The-genetic-map-comparator-a-user-friendly?redirectedFrom=fulltext">Bioinformatics</a>.
-                        The source code of the project are on <a
-                          href="https://github.com/holtzy/GenMap-Comparator">Github</a>.</span>
-                      <div style="margin-top: 5px;">
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="http://www.agap-sunshine.inra.fr/genmapcomp/">Online app</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://github.com/holtzy/GenMap-Comparator">Github</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://academic.oup.com/bioinformatics/article-abstract/33/9/1387/2908431/The-genetic-map-comparator-a-user-friendly?redirectedFrom=fulltext">Paper</a>
-                      </div>
-                    </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/Network_Coauthor.png" width="180px"></img>
+                  <h4>Exploring co-author relationships</h4>
+                  <p style="max-width: 600px"></p>
+                  <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                    href="https://holtzyan.shinyapps.io/the-nb-como-project/">Online app</a>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>Google Scholar is a service that provides any researchers list of publication. I made a script
+                      that harvest this information on the web using <code>R</code>. It then take the list of all
+                      co-authors and check for each pair if they have published a paper together.</p>
+                    <p>The network information is then visualized using <a href="">static graphs</a> with R, and also
+                      using <a href="">interactive version</a> thanks to d3.js</p>
+                    <a href="https://www.data-to-viz.com/graph/arc.html">
+                      <center><img src="img/portfolio/researchNet.png" width="80%"></img></center>
+                    </a>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>Data mining part of the pipeline is available on <a href="">github</a>. Visualizations are
+                      used as example in my other projects: static charts in <a href="">data to viz</a>, interactive
+                      ones in the <a href="">d3 graph gallery</a>.</span>
+                    <br><br><br>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </center>
+      </div>
+  </center>
 
-
-    <!-- Danish como project -->
-    <center>
-      <div class="portfolio-modal modal fade" id="comoProject" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
+  <!-- Greentech-->
+  <center>
+    <div class="portfolio-modal modal fade" id="greenTech" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <img src="img/portfolio/como.png" width="180px"></img>
-                    <h4>Comorbidity Within Mental Disorders</h4>
-                    <p style="max-width: 600px">Visualizing the patterns of comorbidity within treated mental disorders.
-                    </p>
-                    <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                      href="https://holtzyan.shinyapps.io/the-nb-como-project/">Online app</a>
-                    <br><br>
-                    <div style="text-align: left">
-                      <h6>Description</h6>
-                      <hr>
-                      <p><u>Comorbidity</u> is defined as the presence of 1 or more disorders in relation to an index
-                        disorder. I've been involved in a project with the <a href="https://qbi.uq.edu.au/">Queensland
-                          Brain Institute</a> (Australia) and the <a
-                          href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiKjZLU9vXfAhWGX30KHXESA4kQFjAAegQIAxAC&url=https%3A%2F%2Finternational.au.dk%2F&usg=AOvVaw3H3o22AmsQ30L_Elw2o_ZG">University
-                          of Aarhus</a> (Denmark) to build an interactive website allowing to explore the discovered
-                        patterns of comorbidity between mental disorders.</p>
-                      <p>The <a href="https://holtzyan.shinyapps.io/the-nb-como-project/">online tool</a> goes with the
-                        publication in <a
-                          href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2720421">Jama
-                          Psychiatry</a>. Several interactive graphs are available with export options and more. The
-                        tool was created using <code>R</code> and <code>Shiny</code>, plus several
-                        <code>Html widgets</code> for interactivity.</p>
-                      <center><img src="img/portfolio/como-sankey.png" width="80%"></img></center>
-                      <h6>Read more</h6>
-                      <hr>
-                      <span>The web application is available <a
-                          href="https://holtzyan.shinyapps.io/the-nb-como-project/">online</a>. You can read the
-                        scientific paper on <a
-                          href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2720421">Bioinformatics</a>.
-                        The source code of the project are on <a
-                          href="https://github.com/holtzy/the-NB-COMO-Project">Github</a>.</span>
-                      <div style="margin-top: 5px;">
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://holtzyan.shinyapps.io/the-nb-como-project/">Online app</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://github.com/holtzy/the-NB-COMO-Project">Github</a>
-                        <a class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                          href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2720421">Paper</a>
-                      </div>
-                    </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/GreenTech.png" width="180px"></img>
+                  <h4>The Greentech challenge</h4>
+                  <p style="max-width: 600px">Studying water pollution for the French Ministery of environment.</p>
+                  <p style="max-width: 600px"><i>Third price for this dataviz competition.</i></p>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>The GreenTech challenge is a Dataviz competition launched by the French Ministery of
+                      environment that took place in 2017. A huge dataset concerning pesticides in France has been
+                      released, and the goal was to build innovative visualizations to sensibilize and inform citizen
+                      concerning the french situation over the past 6 Years.</p>
+                    <p>We decided to make a team of 4 friends and built a <code>ShinyApp</code> that allows to
+                      efficiently explore this dataset. The app is composed by several sheets, each targeting a
+                      specific theme. This tool should allow you to understand what happens in your neighbourhood and
+                      in the entire country. It is also studied to improve your genereal knowledge concerning
+                      pesticides.</p>
+                    <center><img src="img/portfolio/GreenTech-screen.png" width="80%"></img></center>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>See the associated <a
+                        href="https://github.com/holtzy/GreenTech-Challenge/blob/master/README.md">github
+                        repository</a> for more information and source code of the project.</span>
+                    <br><br><br>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </center>
+      </div>
+  </center>
 
 
-    <!-- Terres Inovia -->
-    <center>
-      <div class="portfolio-modal modal fade" id="terresInovia" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
+
+
+  <!-- UNICS -->
+  <center>
+    <div class="portfolio-modal modal fade" id="unics" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <img src="img/portfolio/TI4.png" width="180px"></img>
-                    <h4>Dashboard for <i>Terres Inovia</i></h4>
-                    <p style="max-width: 600px">Creation of a dashboard to explore the database of a private company.
-                    </p>
-                    <br><br>
-                    <div style="text-align: left">
-                      <h6>Description</h6>
-                      <hr>
-                      <p><a href="http://www.terresinovia.fr">Terres Inovia</a> is a French company carrying out applied
-                        research on oilseed plants and protein crop. It phenotypes the main varieties of 20 crop species
-                        in many locations for several traits every year. This information is stored in a massive
-                        <code>SQL</code> database.</p>
-                      <p>I created a <code>dashboard</code> allowing to explore these data. It allows to quickly
-                        understand what variety performs well in what kind of environmental condition. It thus has a
-                        direct impact on advices provided to farmer in France.</p>
-                      <p>The dashboard was created using <code>R</code> and <code>Shiny</code>. It requires several
-                        <code>HTML widgets</code> to create interactive graphs, and specific packages to interact with
-                        the database. Here is a screenshot of the welcome page of the application:</p>
-                      <center><img src="img/portfolio/TI1.png" width="80%"></img></center>
-                      <br><br>
-                      <h6>Read more</h6>
-                      <hr>
-                      <span>I can't provide more information on this project for privacy reasons.</span>
-                      <br><br><br>
-                    </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/Unics_logo.png" width="180px"></img>
+                  <p style="max-width: 600px">Online tool to estimate standard error of allele frequency in
+                    pool-sequencing experiments.</p>
+                  <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
+                    href="http://www.agap-sunshine.inra.fr/unics/">Online app</a>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>UNICS is a <a href="http://www.agap-sunshine.inra.fr/unics/">web app</a> that helps you
+                      computing the standard error of allele frequency estimations of future pool-sequencing
+                      experiments based on different parameters. You can use it trough the <a
+                        href="http://www.agap-sunshine.inra.fr/unics/">online version</a> and read the <a
+                        href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12723">related
+                        publication</a>.</p>
+                    <p>Application looks like this:</p>
+                    <center><img src="img/portfolio/unics_screen.png" width="80%"></img></center>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>See the associated <a href="https://github.com/holtzy/Unics">github repository</a> for more
+                      information and source code of the project.</span>
+                    <br><br><br>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </center>
+      </div>
+  </center>
 
 
-
-
-
-    <!-- Researcher Network-->
-    <center>
-      <div class="portfolio-modal modal fade" id="authorRelation" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
+  <!-- SURFERS TRAVEL -->
+  <center>
+    <div class="portfolio-modal modal fade" id="surfers" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog h-100">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <img src="img/portfolio/Network_Coauthor.png" width="180px"></img>
-                    <h4>Exploring co-author relationships</h4>
-                    <p style="max-width: 600px"></p>
-                    <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                      href="https://holtzyan.shinyapps.io/the-nb-como-project/">Online app</a>
-                    <br><br>
-                    <div style="text-align: left">
-                      <h6>Description</h6>
-                      <hr>
-                      <p>Google Scholar is a service that provides any researchers list of publication. I made a script
-                        that harvest this information on the web using <code>R</code>. It then take the list of all
-                        co-authors and check for each pair if they have published a paper together.</p>
-                      <p>The network information is then visualized using <a href="">static graphs</a> with R, and also
-                        using <a href="">interactive version</a> thanks to d3.js</p>
-                      <a href="https://www.data-to-viz.com/graph/arc.html">
-                        <center><img src="img/portfolio/researchNet.png" width="80%"></img></center>
-                      </a>
-                      <h6>Read more</h6>
-                      <hr>
-                      <span>Data mining part of the pipeline is available on <a href="">github</a>. Visualizations are
-                        used as example in my other projects: static charts in <a href="">data to viz</a>, interactive
-                        ones in the <a href="">d3 graph gallery</a>.</span>
-                      <br><br><br>
-                    </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <img src="img/portfolio/Surf.png" width="180px"></img>
+                  <h4>The <a href="https://twitter.com/search?f=tweets&vertical=default&q=%23surf&src=typd">#surf</a>
+                    project.</h4>
+                  <p style="max-width: 600px">I recovered tweets containing <a
+                      href="https://twitter.com/search?f=tweets&vertical=default&q=%23surf&src=typd">#surf</a> for 9
+                    months. Here is where surfers travel.</p>
+                  <br><br>
+                  <div style="text-align: left">
+                    <h6>Description</h6>
+                    <hr>
+                    <p>I created an <code>R</code> script that recovers all tweets containing the hashtags
+                      <code>#surf</code> and run it on a webserver for about 9 months. I recovered more than 400k
+                      tweets. Some of them being geolocalized for both home and current location, it is possible to
+                      deduce where surfers travel.</p>
+                    <p>Here is an overview of the result:</p>
+                    <a href="https://www.data-to-viz.com/story/MapConnection.html">
+                      <center><img src="img/portfolio/surf_travel.png" width="80%"></img></center>
+                    </a>
+                    <h6>Read more</h6>
+                    <hr>
+                    <span>See the dedicated page in <a
+                        href="https://www.data-to-viz.com/story/MapConnection.html">data-to-viz.com</a> that tells
+                      more about this project, with explanation on how to build a <a
+                        href="https://www.data-to-viz.com/story/MapConnection.html">connection map</a>.</span>
+                    <br><br><br>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </center>
-
-    <!-- Greentech-->
-    <center>
-      <div class="portfolio-modal modal fade" id="greenTech" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <img src="img/portfolio/GreenTech.png" width="180px"></img>
-                    <h4>The Greentech challenge</h4>
-                    <p style="max-width: 600px">Studying water pollution for the French Ministery of environment.</p>
-                    <p style="max-width: 600px"><i>Third price for this dataviz competition.</i></p>
-                    <br><br>
-                    <div style="text-align: left">
-                      <h6>Description</h6>
-                      <hr>
-                      <p>The GreenTech challenge is a Dataviz competition launched by the French Ministery of
-                        environment that took place in 2017. A huge dataset concerning pesticides in France has been
-                        released, and the goal was to build innovative visualizations to sensibilize and inform citizen
-                        concerning the french situation over the past 6 Years.</p>
-                      <p>We decided to make a team of 4 friends and built a <code>ShinyApp</code> that allows to
-                        efficiently explore this dataset. The app is composed by several sheets, each targeting a
-                        specific theme. This tool should allow you to understand what happens in your neighbourhood and
-                        in the entire country. It is also studied to improve your genereal knowledge concerning
-                        pesticides.</p>
-                      <center><img src="img/portfolio/GreenTech-screen.png" width="80%"></img></center>
-                      <h6>Read more</h6>
-                      <hr>
-                      <span>See the associated <a
-                          href="https://github.com/holtzy/GreenTech-Challenge/blob/master/README.md">github
-                          repository</a> for more information and source code of the project.</span>
-                      <br><br><br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </center>
-
-
-
-
-    <!-- UNICS -->
-    <center>
-      <div class="portfolio-modal modal fade" id="unics" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <img src="img/portfolio/Unics_logo.png" width="180px"></img>
-                    <p style="max-width: 600px">Online tool to estimate standard error of allele frequency in
-                      pool-sequencing experiments.</p>
-                    <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger"
-                      href="http://www.agap-sunshine.inra.fr/unics/">Online app</a>
-                    <br><br>
-                    <div style="text-align: left">
-                      <h6>Description</h6>
-                      <hr>
-                      <p>UNICS is a <a href="http://www.agap-sunshine.inra.fr/unics/">web app</a> that helps you
-                        computing the standard error of allele frequency estimations of future pool-sequencing
-                        experiments based on different parameters. You can use it trough the <a
-                          href="http://www.agap-sunshine.inra.fr/unics/">online version</a> and read the <a
-                          href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12723">related
-                          publication</a>.</p>
-                      <p>Application looks like this:</p>
-                      <center><img src="img/portfolio/unics_screen.png" width="80%"></img></center>
-                      <h6>Read more</h6>
-                      <hr>
-                      <span>See the associated <a href="https://github.com/holtzy/Unics">github repository</a> for more
-                        information and source code of the project.</span>
-                      <br><br><br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </center>
-
-
-    <!-- SURFERS TRAVEL -->
-    <center>
-      <div class="portfolio-modal modal fade" id="surfers" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog h-100">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <div class="modal-body">
-                    <img src="img/portfolio/Surf.png" width="180px"></img>
-                    <h4>The <a href="https://twitter.com/search?f=tweets&vertical=default&q=%23surf&src=typd">#surf</a>
-                      project.</h4>
-                    <p style="max-width: 600px">I recovered tweets containing <a
-                        href="https://twitter.com/search?f=tweets&vertical=default&q=%23surf&src=typd">#surf</a> for 9
-                      months. Here is where surfers travel.</p>
-                    <br><br>
-                    <div style="text-align: left">
-                      <h6>Description</h6>
-                      <hr>
-                      <p>I created an <code>R</code> script that recovers all tweets containing the hashtags
-                        <code>#surf</code> and run it on a webserver for about 9 months. I recovered more than 400k
-                        tweets. Some of them being geolocalized for both home and current location, it is possible to
-                        deduce where surfers travel.</p>
-                      <p>Here is an overview of the result:</p>
-                      <a href="https://www.data-to-viz.com/story/MapConnection.html">
-                        <center><img src="img/portfolio/surf_travel.png" width="80%"></img></center>
-                      </a>
-                      <h6>Read more</h6>
-                      <hr>
-                      <span>See the dedicated page in <a
-                          href="https://www.data-to-viz.com/story/MapConnection.html">data-to-viz.com</a> that tells
-                        more about this project, with explanation on how to build a <a
-                          href="https://www.data-to-viz.com/story/MapConnection.html">connection map</a>.</span>
-                      <br><br><br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </center>
+      </div>
+  </center>
 
 
 
 
 
 
-    <!-- ======================================================================= -->
+  <!-- ======================================================================= -->
 
 
 
@@ -1792,40 +1554,39 @@
 
 
 
-    <!-- ======================== JAVASCRIPT SECTION =========================== -->
+  <!-- ======================== JAVASCRIPT SECTION =========================== -->
 
 
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/agency.min.js"></script>
-    <script src="js/portfolio.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+  <script src="js/portfolio.js"></script>
 
-    <!-- Load d3.js -->
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-79254642-3');
-    </script>
-
+    gtag('config', 'UA-79254642-3');
+  </script>
 
 
 
 
-    <!-- ======================================================================= -->
-  </body>
+
+  <!-- ======================================================================= -->
+</body>
 
 </html>
